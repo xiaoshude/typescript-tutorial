@@ -230,6 +230,80 @@ type P4 = string[]["push"];  // (...items: string[]) => number
 type P5 = string[][0];  // string
 ```
 
+##### 定义类的类型
+
+类的类型定义必须伴随类的实现：
+
+```ts
+class Greeter {
+    greeting: string;
+    constructor(message: string) {
+        this.greeting = message;
+    }
+    greet() {
+        return "Hello, " + this.greeting;
+    }
+}
+
+let greeter: Greeter;
+greeter = new Greeter("world");
+console.log(greeter.greet());
+```
+
+声明类的同时，获得了两个类型：
+
+- 类实例的类型：和类名（Greeter）同名的实例的类型（Greeter），该类型可以用在任何可以 interface 合法的地方，比如
+
+```ts
+let greeter: Greeter;
+
+// or interface extends 之后
+
+class Point {
+    x: number;
+    y: number;
+}
+
+interface Point3d extends Point {
+    z: number;
+}
+
+let point3d: Point3d = {x: 1, y: 2, z: 3};
+```
+
+- 类的类型，要读取类的类型必须使用 typeof 运算符：
+
+```ts
+class Greeter {
+    static standardGreeting = "Hello, there";
+    greeting: string;
+    greet() {
+        if (this.greeting) {
+            return "Hello, " + this.greeting;
+        }
+        else {
+            return Greeter.standardGreeting;
+        }
+    }
+}
+
+let greeter1: Greeter;
+greeter1 = new Greeter();
+console.log(greeter1.greet());
+
+let greeterMaker: typeof Greeter = Greeter;
+greeterMaker.standardGreeting = "Hey there!";
+
+let greeter2: Greeter = new greeterMaker();
+console.log(greeter2.greet());
+```
+
+当一个变量用来容纳类本身时，这样用。
+
+##### 通过定义 class 来定义类的实例类型
+
+上面提到，伴随类的定义，会同时定义类的实例类型。
+
 ##### 定义函数的形状
 
 函数形状由参数和返回值的类型决定
