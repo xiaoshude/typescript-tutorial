@@ -17,3 +17,63 @@ type Readonly<T> = {
 ```
 
 readonly 可以类比为 const， 为变量使用 const，为属性使用 readonly
+
+#### typeof
+
+JS 通过 typeof 运算符得到值类型：
+
+```js
+typeof 1 // "number"
+typeof {} //"object"
+
+typeof (() => {}) // "function"
+```
+
+因为 JS 的弱类型，typeof 只能得到一个范围很大的类，无法得到确切的形状。比如：
+
+```js
+typeof {a: 1, b: 2} // "object"
+```
+
+得到的依然是 object。
+
+令人兴奋的是，TS 增强了 typeof，可以得到确切的形状，比如：
+
+```TS
+type T = typeof {a: 1, b: 2}
+
+// T 等价于
+
+interface T {
+    a: number,
+    b: number
+}
+```
+
+`T` 保存了对象的类型（完整形状）。
+
+##### 应用
+
+前面我们知道，enum 可以同时声明一个对象及类型。但这个类型并不是对象的类型。如果要获取对象的类型需要使用 `typeof`（有没有感觉似曾相识：class 也会声明同名类型，但是这个类型时实例的类型，如果要想获取类的类型，也是得使用 typeof className）。
+
+```ts
+enum LogLevel {
+    ERROR, WARN
+}
+
+type T = typeof LogLevel
+
+// 然后就可以愉快的
+
+interface A extends T {
+    INFO: number
+}
+
+let a: A = {
+    ERROR: LogLevel.ERROR,
+    WARN: LogLevel.WARN,
+    INFO: 1
+}
+```
+
+使用 interface extends 一个枚举对象的类型。
