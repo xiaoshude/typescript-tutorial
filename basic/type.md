@@ -21,7 +21,7 @@ TS 中不是这样。要把类型理解为形状（shape），只要符合这个
 一般对接口的印象可能这样：接口就像最低要求（约束），我只要满足了这个要求（至于有没有超额完成不管），就说实现了接口。
 
 但在 TS, 接口不仅这个含义：
-- 当接口用来约束类时，就是这样意思，只要类包含接口要求的属性方法就行
+- 当接口用来约束类时，就是这样意思，只要类的实例包含接口要求的属性方法就行
 - 接口还可以用来约束对象，约束对象时，就和上面的类型一个意思，用来表示形状
 
 有了上面的准备，下面进入正题。
@@ -804,6 +804,21 @@ let sum = function (x, y) {
 
 - 对匿名函数类型定义：上面已经说过。
 - 对变量类型定义：这里可以省略，由右侧的函数声明推断出来。
+
+###### 类约束
+
+class implements interface，interface 用来约束 class 的实例包含 interface 中声明的属性、方法：
+
+```ts
+interface ClockInterface {
+    currentTime: Date;
+}
+
+class Clock implements ClockInterface {
+    currentTime: Date = new Date();
+    constructor(h: number, m: number) { }
+}
+```
 
 ##### 断言一个已定义变量的类型
 
