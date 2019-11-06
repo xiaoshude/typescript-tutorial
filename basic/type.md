@@ -679,12 +679,31 @@ interface SelectableControl extends Control {
 类比函数定义：
 
 ```ts
+// 使用 type
 const identity = x => x; // 值计算
 type Identity<T> = T; // 类型计算函数
 
 const pair = (x, y) => [x, y]; // 值计算
 type Pair<T, U> = [T, U]; // 类型计算函数
+
+// 使用 interface
+function module(x, y) {
+  return {
+    //...
+  }
+}
+interface Module<S, R> {
+  namespaced?: boolean;
+  state?: S | (() => S);
+  getters?: GetterTree<S, R>;
+  actions?: ActionTree<S, R>;
+  mutations?: MutationTree<S>;
+  modules?: ModuleTree<R>;
+}
+
 ```
+
+类型计算函数还一个名字：泛型。
 
 当类型定义函数和普通函数结合时，TS 提供了一种定义匿名类型函数的语法 - 伴随函数去定义：
 
