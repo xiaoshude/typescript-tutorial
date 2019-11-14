@@ -1,5 +1,16 @@
 ## 高级特性及概念
 
+### 为什么推荐优先使用 interface 定义类型
+
+interface 可以重复定义同一类型，而且下面对上面起增量补充的作用。
+
+尤其写库时，这个特性尤为必要，如果暴露的对象允许外面扩展，意味着类型也要允许外面扩展。当用 interface 定义类型时，很方便外面扩展。
+
+具体的扩展写法参见：
+
+- [Module Augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation)
+- [增强类型以配合插件使用](https://cn.vuejs.org/v2/guide/typescript.html#%E5%A2%9E%E5%BC%BA%E7%B1%BB%E5%9E%8B%E4%BB%A5%E9%85%8D%E5%90%88%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8)
+
 ### 类型检验的诡异之处
 
 上面说到，interface 用来约束对象时，它描述的是形状，被约束对象的所有属性必须不多不少的符合 interface。
