@@ -1,5 +1,36 @@
 ### 语法增强
 
+#### 声明
+
+在 JS 中声明（变量声明/函数声明/类声明）只会创建一种实体：值。
+
+TS 中声明可以创建三种实体：命名空间(namespace)，类型(type)或值(value)。
+
+- 命名空间: Namespace-creating declarations create a namespace, which contains names that are accessed using a dotted notation.
+- 类型: Type-creating declarations do just that: they create a type that is visible with the declared shape and bound to the given name.
+- 值: value-creating declarations create values that are visible in the output JavaScript.
+
+##### 为什么要区分不同实体
+
+因为不同实体是不能互相运算的，应该放值的地方不能放类型。
+
+##### 声明 -> 实体
+
+一个声明有时会生成两个实体，下面是对应表：
+
+Declaration Type | Namespace | Type | Value
+---------|----------|---------|---------
+ Namespace | X |  | X
+ Class |  | X | X
+ Enum |  | X | X
+ Interface |  | X |
+ Type Alias |  | X |
+ Function |  |  | X
+ Variable |  |  | X
+
+
+ 更详细的内容参考：[Declaration Merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#basic-concepts)
+
 #### 对类的增强
 
 放在面向对象通用知识中一块说
