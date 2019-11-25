@@ -36,3 +36,7 @@ export class Leaf extends AbstractNode {
 [How to fix nasty circular dependency issues once and for all in JavaScript & TypeScript](https://medium.com/visual-development/how-to-fix-nasty-circular-dependency-issues-once-and-for-all-in-javascript-typescript-a04c987cf0de) 这篇文章介绍了一个办法，把这种引入顺序通过一个 internal 文件给明确出来。
 
 具体应用可以看 [mobx/src/internal.ts](https://github.com/mobxjs/mobx/blob/master/src/internal.ts)
+
+### 限制对象中的 key 为 enum
+
+[quick fix](https://www.jianshu.com/p/9cd6ba509515)
