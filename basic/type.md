@@ -560,30 +560,38 @@ let myVar: I2['y'];  // indexed access type
 
 ##### 即时运算
 
-- &: 看到这个运算符，想 interface 重复声明就好了（新类型包含两个类型中全部属性）。
+###### &
+
+看到这个运算符，想 interface 重复声明就好了（新类型包含两个类型中全部属性）。
   
-    ```ts
-    type Point = {
-      x: number;
-      y: number;
-    };
+```ts
+type Point = {
+    x: number;
+    y: number;
+};
 
-    type A = {
-      a: number
-    }
+type A = {
+    a: number
+}
 
-    type C = Point & A
+type C = Point & A
 
-    const test: C = {
-      x: 1,
-      y: 2,
-      a: 1
-    }
-    ```
+const test: C = {
+    x: 1,
+    y: 2,
+    a: 1
+}
+```
 
-- extends:
+###### extends
 
-interface 定义接口时支持继承一个或多个其他已定义的接口或者类：
+1. 定义接口，使用 extends 继承一个已定义的接口或者类
+
+```ts
+TypeA extends TypeB
+```
+
+常在 interface 声明时使用：
 
 ```ts
 interface Shape {
@@ -604,7 +612,7 @@ square.sideLength = 10;
 square.penWidth = 5.0;
 ```
 
-看到 extends，当做 `Shape & PenStroke`，和 interface 重复声明一样的效果，只不过每次声明给了不同的名字。
+看到 extends，等价于 `Shape & PenStroke`，和 interface 重复声明一样的效果，只不过每次声明给了不同的名字。
 
 ```ts
 class Control {
@@ -619,8 +627,32 @@ interface SelectableControl extends Control {
 
 当 extends 类时，当做 extends 类的类型定义。
 
-- |: 看到这个运算符，应该进行如下等价转换：比如 `A | B => A || B || A & B`, | 到逻辑运算符 || 的转换。
-- keyof T: 先看例子
+2. 逻辑运算符
+
+```ts
+TypeA extends TypeB
+```
+
+断言 TypeA 满足 TypeB所有的属性要求，可以超出。换句话 TypeB 为 TypeA的最小约束。
+
+###### is
+
+作为逻辑运算符，和 extends 比较着看：
+
+```ts
+TypeA extends TypeB
+TypeA is TypeB
+```
+
+is 是表示 TypeA 和 TypeB 形状一致，属性不多不少。
+
+###### |
+
+看到这个运算符，应该进行如下等价转换：比如 `A | B => A || B || A & B`, | 到逻辑运算符 || 的转换。
+
+###### keyof T
+
+先看例子
   
   ```ts
   interface Person {
@@ -636,7 +668,9 @@ interface SelectableControl extends Control {
 
   可以看出返回的是字面量类型 —— 通过 `|` 连接所有的key。
 
-  - in keyof T: 看例子
+###### in keyof T
+
+看例子
   
   ```ts
   interface Person {
@@ -663,16 +697,11 @@ interface SelectableControl extends Control {
 
   由此可以得到 `[P in keyof T]` 的运算结果，是在类型中产生新属性。（就像Python中的列表推导式，但不是在列表中产生新的元素，而是在类型中产生新的属性。）
 
-- 三目运算符 和 T extends U: T extends U 断言 T 是否为 U 的值类型，一般用在三目运算中 或者 对类型参数进行约束。
+###### 三目运算符
 
-  ```ts
-  // 对类型参数进行约束
-  function getProperty<T, K extends keyof T>(obj: T, key: K) {
-    return obj[key];
-  }
-  ```
+三目运算符经常和逻辑运算符 extends 一起使用：
 
-  `T extends U ? X : Y`: 意思是，若T能够赋值给U(子类型)，那么类型是X，否则为Y。
+ `T extends U ? X : Y`: 意思是，若T能够赋值给U(子类型)，那么类型是X，否则为Y。
 
 ##### 定义类型运算过程（类型计算函数）
 
