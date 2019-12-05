@@ -78,3 +78,23 @@ enum FileAccess {
 
 - 如何书写声明文件
 - TS 如何推断 this 的类型，及如何定义 this 类型
+
+### infer 运算符
+
+字面意思：推断
+
+```ts
+value infer Type
+```
+
+把从 value 推断出来的类型赋值给 Type，等价于：
+
+```ts
+type Type = typeof value
+```
+
+### 自定义类型守卫
+
+is 逻辑运算符的一种使用场景。这个不细说了，当遇到相应需求时很容易查到。
+
+[参考](https://jkchao.github.io/typescript-book-chinese/typings/typeGuard.html)
