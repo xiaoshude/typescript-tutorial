@@ -1,0 +1,832 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>高级特性及概念 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="actual-project.html" />
+    
+    
+    <link rel="prev" href="basic/syntax-enhance.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    写给大家看的 TypeScript 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basic/">
+            
+                <a href="basic/">
+            
+                    
+                    最少必要知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="basic/type.html">
+            
+                <a href="basic/type.html">
+            
+                    
+                    类型系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" >
+            
+                <span>
+            
+                    
+                    什么是类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" >
+            
+                <span>
+            
+                    
+                    哪些类型可以直接用（内置类型）
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.2.1" >
+            
+                <span>
+            
+                    
+                    JavaScript 的内置类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2.2" >
+            
+                <span>
+            
+                    
+                    DOM 和 BOM 的内置对象
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2.3" >
+            
+                <span>
+            
+                    
+                    TS 引入的内置类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" >
+            
+                <span>
+            
+                    
+                    如何自定义类型
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.3.1" >
+            
+                <span>
+            
+                    
+                    定义对象的形状
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.3.1.1" >
+            
+                <span>
+            
+                    
+                    定义不确定属性名的对象类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3.2" >
+            
+                <span>
+            
+                    
+                    定义数组的形状
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3.3" >
+            
+                <span>
+            
+                    
+                    通过定义对象来定义类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3.4" >
+            
+                <span>
+            
+                    
+                    通过引用对象的 属性、方法，来引用其已定义的类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3.5" >
+            
+                <span>
+            
+                    
+                    定义类的类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3.6" >
+            
+                <span>
+            
+                    
+                    通过定义 class 来定义类的实例类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3.7" >
+            
+                <span>
+            
+                    
+                    定义函数的形状
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.3.7.1" >
+            
+                <span>
+            
+                    
+                    几种特殊参数的类型声明
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3.8" data-path="literal-type">
+            
+                <span>
+            
+                    
+                    字面量类型（literal Type）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3.9" >
+            
+                <span>
+            
+                    
+                    修饰符
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" >
+            
+                <span>
+            
+                    
+                    类型缺失时的行为
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" >
+            
+                <span>
+            
+                    
+                    可以对类型进行编程吗（类型运算）
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.5.1" >
+            
+                <span>
+            
+                    
+                    属性访问
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5.2" >
+            
+                <span>
+            
+                    
+                    即时运算
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5.3" >
+            
+                <span>
+            
+                    
+                    定义类型运算过程（类型计算函数）
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.5.3.1" >
+            
+                <span>
+            
+                    
+                    内置类型计算函数
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" >
+            
+                <span>
+            
+                    
+                    如何用这些类型对变量进行约束
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.6.1" >
+            
+                <span>
+            
+                    
+                    初始化一个变量时指定类型
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.6.1.1" >
+            
+                <span>
+            
+                    
+                    变量类型约束
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6.1.2" >
+            
+                <span>
+            
+                    
+                    函数类型约束
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6.1.3" >
+            
+                <span>
+            
+                    
+                    类约束
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6.2" >
+            
+                <span>
+            
+                    
+                    断言一个已定义变量的类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="basic/object-oriented.html">
+            
+                <a href="basic/object-oriented.html">
+            
+                    
+                    面向对象通用知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="basic/syntax-enhance.html">
+            
+                <a href="basic/syntax-enhance.html">
+            
+                    
+                    语法增强
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="advanced.html">
+            
+                <a href="advanced.html">
+            
+                    
+                    高级特性及概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="actual-project.html">
+            
+                <a href="actual-project.html">
+            
+                    
+                    实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="reference.html">
+            
+                <a href="reference.html">
+            
+                    
+                    参考
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >高级特性及概念</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x9AD8;&#x7EA7;&#x7279;&#x6027;&#x53CA;&#x6982;&#x5FF5;">&#x9AD8;&#x7EA7;&#x7279;&#x6027;&#x53CA;&#x6982;&#x5FF5;</h2>
+<h3 id="&#x4E3A;&#x4EC0;&#x4E48;&#x63A8;&#x8350;&#x4F18;&#x5148;&#x4F7F;&#x7528;-interface-&#x5B9A;&#x4E49;&#x7C7B;&#x578B;">&#x4E3A;&#x4EC0;&#x4E48;&#x63A8;&#x8350;&#x4F18;&#x5148;&#x4F7F;&#x7528; interface &#x5B9A;&#x4E49;&#x7C7B;&#x578B;</h3>
+<p>interface &#x53EF;&#x4EE5;&#x91CD;&#x590D;&#x5B9A;&#x4E49;&#x540C;&#x4E00;&#x7C7B;&#x578B;&#xFF0C;&#x800C;&#x4E14;&#x4E0B;&#x9762;&#x5BF9;&#x4E0A;&#x9762;&#x8D77;&#x589E;&#x91CF;&#x8865;&#x5145;&#x7684;&#x4F5C;&#x7528;&#x3002;</p>
+<p>&#x5C24;&#x5176;&#x5199;&#x5E93;&#x65F6;&#xFF0C;&#x8FD9;&#x4E2A;&#x7279;&#x6027;&#x5C24;&#x4E3A;&#x5FC5;&#x8981;&#xFF0C;&#x5982;&#x679C;&#x66B4;&#x9732;&#x7684;&#x5BF9;&#x8C61;&#x5141;&#x8BB8;&#x5916;&#x9762;&#x6269;&#x5C55;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x7C7B;&#x578B;&#x4E5F;&#x8981;&#x5141;&#x8BB8;&#x5916;&#x9762;&#x6269;&#x5C55;&#x3002;&#x5F53;&#x7528; interface &#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#x65F6;&#xFF0C;&#x5F88;&#x65B9;&#x4FBF;&#x5916;&#x9762;&#x6269;&#x5C55;&#x3002;</p>
+<p>&#x5177;&#x4F53;&#x7684;&#x6269;&#x5C55;&#x5199;&#x6CD5;&#x53C2;&#x89C1;&#xFF1A;</p>
+<ul>
+<li><a href="https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation" target="_blank">Module Augmentation</a></li>
+<li><a href="https://cn.vuejs.org/v2/guide/typescript.html#%E5%A2%9E%E5%BC%BA%E7%B1%BB%E5%9E%8B%E4%BB%A5%E9%85%8D%E5%90%88%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8" target="_blank">&#x589E;&#x5F3A;&#x7C7B;&#x578B;&#x4EE5;&#x914D;&#x5408;&#x63D2;&#x4EF6;&#x4F7F;&#x7528;</a></li>
+</ul>
+<h3 id="&#x7C7B;&#x578B;&#x68C0;&#x9A8C;&#x7684;&#x8BE1;&#x5F02;&#x4E4B;&#x5904;">&#x7C7B;&#x578B;&#x68C0;&#x9A8C;&#x7684;&#x8BE1;&#x5F02;&#x4E4B;&#x5904;</h3>
+<p>&#x4E0A;&#x9762;&#x8BF4;&#x5230;&#xFF0C;interface &#x7528;&#x6765;&#x7EA6;&#x675F;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x5B83;&#x63CF;&#x8FF0;&#x7684;&#x662F;&#x5F62;&#x72B6;&#xFF0C;&#x88AB;&#x7EA6;&#x675F;&#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x5FC5;&#x987B;&#x4E0D;&#x591A;&#x4E0D;&#x5C11;&#x7684;&#x7B26;&#x5408; interface&#x3002;</p>
+<p>&#x7136;&#x800C;&#x8FD9;&#x79CD;&#x4E0D;&#x591A;&#x4E0D;&#x5C11;&#x7684;&#x7EA6;&#x675F;&#x884C;&#x4E3A;&#x53EA;&#x53D1;&#x751F;&#x5728;&#x4F7F;&#x7528;&#x5BF9;&#x8C61;&#x5B57;&#x9762;&#x91CF;&#x8D4B;&#x503C;&#x65F6;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">interface</span> Named {
+    name: <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-keyword">let</span> x: Named;
+
+<span class="hljs-comment">// &#x8FD9;&#x6837;&#x4F1A;&#x62A5;&#x9519;&#xFF1A;&#x56E0;&#x4E3A;&#x591A;&#x4E86;&#x4E00;&#x4E2A; location &#x5C5E;&#x6027;</span>
+<span class="hljs-comment">// Type &apos;{ name: string; location: string; }&apos; is not assignable to type &apos;Named&apos;.</span>
+x = { name: <span class="hljs-string">&apos;Alice&apos;</span>, location: <span class="hljs-string">&apos;Seattle&apos;</span> };
+</code></pre>
+<p>&#x4F46;&#x662F;&#x4E0B;&#x9762;&#x786E;&#x5B9E;&#x53EF;&#x4EE5;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x7EA6;&#x675F;&#x884C;&#x4E3A;&#x662F;&#xFF1A;&#x53EF;&#x591A;&#x4E0D;&#x53EF;&#x5C11;&#x3002;</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">interface</span> Named {
+    name: <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-keyword">let</span> x: Named;
+<span class="hljs-comment">// y&apos;s inferred type is { name: string; location: string; }</span>
+<span class="hljs-keyword">let</span> y = { name: <span class="hljs-string">&apos;Alice&apos;</span>, location: <span class="hljs-string">&apos;Seattle&apos;</span> };
+<span class="hljs-comment">// &#x8FD9;&#x65F6;&#x4E0D;&#x62A5;&#x9519;&#xFF0C;&#x53EA;&#x8981;&#x6EE1;&#x8DB3; interface &#x7684;&#x5C5E;&#x6027;&#x8981;&#x6C42;&#xFF0C;&#x591A;&#x6CA1;&#x5173;&#x7CFB;</span>
+x = y;
+<span class="hljs-comment">// &#x8FD9;&#x65F6;&#x4E0D;&#x62A5;&#x9519;&#xFF0C;&#x53EA;&#x8981;&#x6EE1;&#x8DB3; interface &#x7684;&#x5C5E;&#x6027;&#x8981;&#x6C42;&#xFF0C;&#x591A;&#x6CA1;&#x5173;&#x7CFB;</span>
+x = {...y}
+</code></pre>
+<p>&#x5176;&#x4ED6;&#x8FD8;&#x6709;&#x4E00;&#x4E9B;&#x6BD4;&#x5982;&#xFF1A;&#x4E0D;&#x540C;&#x5F62;&#x72B6;&#x7684;&#x51FD;&#x6570;&#x7C7B;&#x578B;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x4E92;&#x76F8;&#x8D4B;&#x503C;&#x3001;&#x4E0D;&#x540C;&#x7684;&#x679A;&#x4E3E;&#x7C7B;&#x578B;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x76F8;&#x4E92;&#x8D4B;&#x503C;&#xFF0C;&#x4E0D;&#x7528;&#x7279;&#x522B;&#x8BB0;&#xFF0C;&#x6309;&#x62A5;&#x9519;&#x63D0;&#x793A;&#x884C;&#x4E8B;&#x5373;&#x53EF;&#x3002;&#x8BB0;&#x4F4F;&#x4E00;&#x4E2A;&#x539F;&#x5219;&#xFF1A;&#x8FD9;&#x4E9B;&#x770B;&#x4F3C;&#x7684;&#x7279;&#x4F8B;&#x90FD;&#x662F;&#x4E3A;&#x4E86;&#x9002;&#x5E94; JS &#x73B0;&#x6709;&#x7684;&#x884C;&#x4E3A;&#x3002;
+&#x7CFB;&#x7EDF;&#x4E86;&#x89E3;&#x53C2;&#x8003;&#xFF1A;<a href="https://zhongsp.gitbooks.io/typescript-handbook/content/doc/handbook/Type%20Compatibility.html" target="_blank">&#x7C7B;&#x578B;&#x517C;&#x5BB9;&#x6027;</a></p>
+<h3 id="&#x679A;&#x4E3E;">&#x679A;&#x4E3E;</h3>
+<ul>
+<li>&#x5728;&#x5BF9;&#x679A;&#x4E3E;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x521D;&#x59CB;&#x5316;&#x503C;&#x65F6;&#xFF0C;&#x60F3;&#x666E;&#x901A;&#x5BF9;&#x8C61;&#x90A3;&#x6837;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8868;&#x8FBE;&#x5F0F;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-ts"><span class="hljs-keyword">enum</span> FileAccess {
+    <span class="hljs-comment">// constant members</span>
+    None,
+    Read    = <span class="hljs-number">1</span> &lt;&lt; <span class="hljs-number">1</span>,
+    Write   = <span class="hljs-number">1</span> &lt;&lt; <span class="hljs-number">2</span>,
+    <span class="hljs-comment">// computed member</span>
+    G = <span class="hljs-string">&quot;123&quot;</span>.length
+}
+</code></pre>
+<ul>
+<li>&#x5BF9; enum &#x8FDB;&#x884C;&#x4FEE;&#x9970;&#xFF1A;<ul>
+<li>const&#xFF1A; &#x9650;&#x5236;&#x679A;&#x4E3E;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x521D;&#x59CB;&#x5316;&#x503C;&#x65F6;&#xFF0C;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x8868;&#x8FBE;&#x5F0F;</li>
+</ul>
+</li>
+</ul>
+<h3 id="interface-&#x548C;-type-&#x7684;&#x7EC6;&#x5FAE;&#x5DEE;&#x522B;">interface &#x548C; type &#x7684;&#x7EC6;&#x5FAE;&#x5DEE;&#x522B;</h3>
+<p>&#x8BE6;&#x7EC6;&#x7684;&#x89E3;&#x91CA;&#x67E5;&#x770B;&#xFF1A;<a href="https://www.typescriptlang.org/docs/handbook/advanced-types.html#interfaces-vs-type-aliases" target="_blank">interfaces vs type</a></p>
+<h3 id="&#x66F4;&#x591A;&#x7684;&#x5185;&#x7F6E;&#x7C7B;&#x578B;&#x8BA1;&#x7B97;&#x51FD;&#x6570;">&#x66F4;&#x591A;&#x7684;&#x5185;&#x7F6E;&#x7C7B;&#x578B;&#x8BA1;&#x7B97;&#x51FD;&#x6570;</h3>
+<p>&#x8BE6;&#x7EC6;&#x7684;&#x4ECB;&#x7ECD;&#x67E5;&#x770B;&#xFF1A;<a href="https://zhongsp.gitbooks.io/typescript-handbook/content/doc/handbook/Utility%20Types.html" target="_blank">&#x5185;&#x7F6E;&#x7C7B;&#x578B;&#x8BA1;&#x7B97;&#x51FD;&#x6570;</a></p>
+<p>&#x66F4;&#x591A;&#x672A;&#x63D0;&#x53CA;&#x53EF;&#x80FD;&#x5728;&#x7279;&#x5B9A;&#x60C5;&#x666F;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x529F;&#x80FD;&#xFF1A;</p>
+<ul>
+<li>&#x5982;&#x4F55;&#x4E66;&#x5199;&#x58F0;&#x660E;&#x6587;&#x4EF6;</li>
+<li>TS &#x5982;&#x4F55;&#x63A8;&#x65AD; this &#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x53CA;&#x5982;&#x4F55;&#x5B9A;&#x4E49; this &#x7C7B;&#x578B;</li>
+</ul>
+<h3 id="infer-&#x8FD0;&#x7B97;&#x7B26;">infer &#x8FD0;&#x7B97;&#x7B26;</h3>
+<p>&#x5B57;&#x9762;&#x610F;&#x601D;&#xFF1A;&#x63A8;&#x65AD;</p>
+<pre><code class="lang-ts">value infer Type
+</code></pre>
+<p>&#x628A;&#x4ECE; value &#x63A8;&#x65AD;&#x51FA;&#x6765;&#x7684;&#x7C7B;&#x578B;&#x8D4B;&#x503C;&#x7ED9; Type&#xFF0C;&#x7B49;&#x4EF7;&#x4E8E;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">type</span> Type = <span class="hljs-keyword">typeof</span> value
+</code></pre>
+<h3 id="&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#x5B88;&#x536B;">&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#x5B88;&#x536B;</h3>
+<p>is &#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x4E00;&#x79CD;&#x4F7F;&#x7528;&#x573A;&#x666F;&#x3002;&#x8FD9;&#x4E2A;&#x4E0D;&#x7EC6;&#x8BF4;&#x4E86;&#xFF0C;&#x5F53;&#x9047;&#x5230;&#x76F8;&#x5E94;&#x9700;&#x6C42;&#x65F6;&#x5F88;&#x5BB9;&#x6613;&#x67E5;&#x5230;&#x3002;</p>
+<p><a href="https://jkchao.github.io/typescript-book-chinese/typings/typeGuard.html" target="_blank">&#x53C2;&#x8003;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="basic/syntax-enhance.html" class="navigation navigation-prev " aria-label="Previous page: 语法增强">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="actual-project.html" class="navigation navigation-next " aria-label="Next page: 实践">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"高级特性及概念","level":"1.3","depth":1,"next":{"title":"实践","level":"1.4","depth":1,"path":"actual-project.md","ref":"./actual-project.md","articles":[]},"previous":{"title":"语法增强","level":"1.2.3","depth":2,"path":"basic/syntax-enhance.md","ref":"./basic/syntax-enhance.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"advanced.md","mtime":"2019-12-05T14:54:50.343Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T00:57:13.887Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

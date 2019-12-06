@@ -1,0 +1,23 @@
+{
+  "name": "typescript-tutorial",
+  "version": "1.0.0",
+  "description": "写给大家看的 TypeScript 教程",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "sh ./deploy.sh",
+    "build": "gitbook build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaoshude/typescript-tutorial.git"
+  },
+  "author": "fjywan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiaoshude/typescript-tutorial/issues"
+  },
+  "homepage": "https://github.com/xiaoshude/typescript-tutorial#readme",
+  "dependencies": {
+    "gitbook-cli": "^2.3.2"
+  }
+}

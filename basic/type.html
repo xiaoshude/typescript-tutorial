@@ -1,0 +1,1397 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>类型系统 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    写给大家看的 TypeScript 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    最少必要知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="type.html">
+            
+                <a href="type.html">
+            
+                    
+                    类型系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" >
+            
+                <span>
+            
+                    
+                    什么是类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" >
+            
+                <span>
+            
+                    
+                    哪些类型可以直接用（内置类型）
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.2.1" >
+            
+                <span>
+            
+                    
+                    JavaScript 的内置类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2.2" >
+            
+                <span>
+            
+                    
+                    DOM 和 BOM 的内置对象
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2.3" >
+            
+                <span>
+            
+                    
+                    TS 引入的内置类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" >
+            
+                <span>
+            
+                    
+                    如何自定义类型
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.3.1" >
+            
+                <span>
+            
+                    
+                    定义对象的形状
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.3.1.1" >
+            
+                <span>
+            
+                    
+                    定义不确定属性名的对象类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3.2" >
+            
+                <span>
+            
+                    
+                    定义数组的形状
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3.3" >
+            
+                <span>
+            
+                    
+                    通过定义对象来定义类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3.4" >
+            
+                <span>
+            
+                    
+                    通过引用对象的 属性、方法，来引用其已定义的类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3.5" >
+            
+                <span>
+            
+                    
+                    定义类的类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3.6" >
+            
+                <span>
+            
+                    
+                    通过定义 class 来定义类的实例类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3.7" >
+            
+                <span>
+            
+                    
+                    定义函数的形状
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.3.7.1" >
+            
+                <span>
+            
+                    
+                    几种特殊参数的类型声明
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3.8" data-path="../literal-type">
+            
+                <span>
+            
+                    
+                    字面量类型（literal Type）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3.9" >
+            
+                <span>
+            
+                    
+                    修饰符
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" >
+            
+                <span>
+            
+                    
+                    类型缺失时的行为
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" >
+            
+                <span>
+            
+                    
+                    可以对类型进行编程吗（类型运算）
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.5.1" >
+            
+                <span>
+            
+                    
+                    属性访问
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5.2" >
+            
+                <span>
+            
+                    
+                    即时运算
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5.3" >
+            
+                <span>
+            
+                    
+                    定义类型运算过程（类型计算函数）
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.5.3.1" >
+            
+                <span>
+            
+                    
+                    内置类型计算函数
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" >
+            
+                <span>
+            
+                    
+                    如何用这些类型对变量进行约束
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.6.1" >
+            
+                <span>
+            
+                    
+                    初始化一个变量时指定类型
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.6.1.1" >
+            
+                <span>
+            
+                    
+                    变量类型约束
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6.1.2" >
+            
+                <span>
+            
+                    
+                    函数类型约束
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6.1.3" >
+            
+                <span>
+            
+                    
+                    类约束
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6.2" >
+            
+                <span>
+            
+                    
+                    断言一个已定义变量的类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="object-oriented.html">
+            
+                <a href="object-oriented.html">
+            
+                    
+                    面向对象通用知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="syntax-enhance.html">
+            
+                <a href="syntax-enhance.html">
+            
+                    
+                    语法增强
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../advanced.html">
+            
+                <a href="../advanced.html">
+            
+                    
+                    高级特性及概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../actual-project.html">
+            
+                <a href="../actual-project.html">
+            
+                    
+                    实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../reference.html">
+            
+                <a href="../reference.html">
+            
+                    
+                    参考
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >类型系统</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x7C7B;&#x578B;&#x7CFB;&#x7EDF;">&#x7C7B;&#x578B;&#x7CFB;&#x7EDF;</h3>
+<p>&#x6709;&#x6BB5;&#x65F6;&#x95F4;&#x5728;&#x63A8;&#x8FDB;&#x9879;&#x76EE;&#x7684;&#x6D4B;&#x8BD5;&#xFF0C;&#x5FFD;&#x7136;&#x610F;&#x8BC6;&#x5230;&#xFF1A;&#x5982;&#x679C;&#x6D4B;&#x8BD5;&#x90FD;&#x5199;&#x4E86;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x4E0D;&#x52A0;&#x5165;&#x7C7B;&#x578B;&#x5462;&#xFF1F;
+&#x4ECE;&#x63D0;&#x9AD8;&#x4EE3;&#x7801;&#x8D28;&#x91CF;&#x51CF;&#x5C11; bug &#x7684;&#x89D2;&#x5EA6;&#x770B;&#xFF1A;&#x7C7B;&#x578B;&#x65AD;&#x8A00;&#x5E94;&#x8BE5;&#x662F;&#x6700;&#x6709;&#x6548;&#x4E14;&#x6BD4;&#x5199;&#x6D4B;&#x8BD5;&#x66F4;&#x5BB9;&#x6613;&#x7684;&#x529E;&#x6CD5;&#x3002;
+&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x989D;&#x5916;&#x7684;&#x6536;&#x76CA;&#xFF1A;&#x5F00;&#x53D1;&#x4F53;&#x9A8C;&#x7684;&#x63D0;&#x5347; &#x2014;&#x2014; &#x66F4;&#x667A;&#x80FD;&#x7684;&#x7F16;&#x8F91;&#x5668;&#x4EE3;&#x7801;&#x63D0;&#x793A;&#x3002;</p>
+<p>&#x8FD9;&#x662F;&#x6211;&#x51B3;&#x5B9A;&#x5F15;&#x5165;&#x7C7B;&#x578B;&#x7684;&#x521D;&#x8877;&#x3002;</p>
+<h4 id="&#x4EC0;&#x4E48;&#x662F;&#x7C7B;&#x578B;">&#x4EC0;&#x4E48;&#x662F;&#x7C7B;&#x578B;</h4>
+<p>&#x7C7B;&#x578B;&#xFF08;type&#xFF09;&#xFF0C;&#x8FD9;&#x4E2A;&#x8BCD;&#x5E76;&#x4E0D;&#x964C;&#x751F;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;</p>
+<ul>
+<li>&#x57FA;&#x6570;&#x6570;&#x636E;&#x7C7B;&#x578B;</li>
+<li>typeof &#x64CD;&#x4F5C;&#x7B26;&#x7B49;&#x3002;</li>
+</ul>
+<p>&#x8FD9;&#x65F6;&#x8BF4;&#x7C7B;&#x578B;&#x65F6;&#x5B9E;&#x9645;&#x5728;&#x63CF;&#x8FF0;&#x5173;&#x7CFB;&#x6216;&#x8005;&#x8BF4;&#x6765;&#x6E90;&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x7C7B;&#x578B;&#x548C;&#x7C7B;&#x7B49;&#x4EF7;&#xFF0C;&#x7C7B;&#x7528;&#x6765;&#x5B9A;&#x4E49;&#x65B0;&#x7C7B;&#x578B;&#x3002;&#x8FD9;&#x4E5F;&#x662F;&#x5927;&#x591A;&#x6570;&#x9759;&#x6001;&#x8BED;&#x8A00;&#x4E2D;&#x7C7B;&#x578B;&#x7684;&#x542B;&#x4E49;&#x3002;</p>
+<p>TS &#x4E2D;&#x4E0D;&#x662F;&#x8FD9;&#x6837;&#x3002;&#x8981;&#x628A;&#x7C7B;&#x578B;&#x7406;&#x89E3;&#x4E3A;&#x5F62;&#x72B6;&#xFF08;shape&#xFF09;&#xFF0C;&#x53EA;&#x8981;&#x7B26;&#x5408;&#x8FD9;&#x4E2A;&#x5F62;&#x72B6;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x7C7B;&#x578B;&#x3002;&#x767D;&#x732B;&#x9ED1;&#x732B;&#x6293;&#x7740;&#x8001;&#x9F20;&#x5C31;&#x662F;&#x597D;&#x732B;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x8BF4;&#x597D;&#x732B;&#x751F;&#x7684;&#x5C31;&#x662F;&#x597D;&#x732B;&#x3002;</p>
+<p>&#x660E;&#x786E;&#x4E86;&#x7C7B;&#x578B;&#x5C31;&#x662F;&#x5F62;&#x72B6;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x8FD8;&#x8981;&#x770B;&#x4E00;&#x4E2A;&#x6982;&#x5FF5;&#xFF1A;&#x63A5;&#x53E3;&#xFF08;Interfaces&#xFF09;&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x5BF9;&#x63A5;&#x53E3;&#x7684;&#x5370;&#x8C61;&#x53EF;&#x80FD;&#x8FD9;&#x6837;&#xFF1A;&#x63A5;&#x53E3;&#x5C31;&#x50CF;&#x6700;&#x4F4E;&#x8981;&#x6C42;&#xFF08;&#x7EA6;&#x675F;&#xFF09;&#xFF0C;&#x6211;&#x53EA;&#x8981;&#x6EE1;&#x8DB3;&#x4E86;&#x8FD9;&#x4E2A;&#x8981;&#x6C42;&#xFF08;&#x81F3;&#x4E8E;&#x6709;&#x6CA1;&#x6709;&#x8D85;&#x989D;&#x5B8C;&#x6210;&#x4E0D;&#x7BA1;&#xFF09;&#xFF0C;&#x5C31;&#x8BF4;&#x5B9E;&#x73B0;&#x4E86;&#x63A5;&#x53E3;&#x3002;</p>
+<p>&#x4F46;&#x5728; TS, &#x63A5;&#x53E3;&#x4E0D;&#x4EC5;&#x8FD9;&#x4E2A;&#x542B;&#x4E49;&#xFF1A;</p>
+<ul>
+<li>&#x5F53;&#x63A5;&#x53E3;&#x7528;&#x6765;&#x7EA6;&#x675F;&#x7C7B;&#x65F6;&#xFF0C;&#x5C31;&#x662F;&#x8FD9;&#x6837;&#x610F;&#x601D;&#xFF0C;&#x53EA;&#x8981;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x5305;&#x542B;&#x63A5;&#x53E3;&#x8981;&#x6C42;&#x7684;&#x5C5E;&#x6027;&#x65B9;&#x6CD5;&#x5C31;&#x884C;</li>
+<li>&#x63A5;&#x53E3;&#x8FD8;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x7EA6;&#x675F;&#x5BF9;&#x8C61;&#xFF0C;&#x7EA6;&#x675F;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x5C31;&#x548C;&#x4E0A;&#x9762;&#x7684;&#x7C7B;&#x578B;&#x4E00;&#x4E2A;&#x610F;&#x601D;&#xFF0C;&#x7528;&#x6765;&#x8868;&#x793A;&#x5F62;&#x72B6;</li>
+</ul>
+<p>&#x6709;&#x4E86;&#x4E0A;&#x9762;&#x7684;&#x51C6;&#x5907;&#xFF0C;&#x4E0B;&#x9762;&#x8FDB;&#x5165;&#x6B63;&#x9898;&#x3002;</p>
+<h4 id="&#x54EA;&#x4E9B;&#x7C7B;&#x578B;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7528;&#xFF08;&#x5185;&#x7F6E;&#x7C7B;&#x578B;&#xFF09;">&#x54EA;&#x4E9B;&#x7C7B;&#x578B;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7528;&#xFF08;&#x5185;&#x7F6E;&#x7C7B;&#x578B;&#xFF09;</h4>
+<h5 id="javascript-&#x7684;&#x5185;&#x7F6E;&#x7C7B;&#x578B;">JavaScript &#x7684;&#x5185;&#x7F6E;&#x7C7B;&#x578B;</h5>
+<ul>
+<li>&#x539F;&#x59CB;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1A;<code>Boolean Null Undefined Number BigInt String Symbol</code> </li>
+<li>Object: <code>Array Map Error Date RegExp</code> &#x7B49;</li>
+</ul>
+<p>JS &#x4E2D;&#x6709;&#x4E2A;&#x5305;&#x88C5;&#x5BF9;&#x8C61;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x5C31;&#x662F;&#x89E3;&#x91CA; <code>1</code> &#x548C; &#x548C; <code>new Number(1)</code> &#x533A;&#x522B;&#x7684;&#x3002;</p>
+<p>&#x5728; TS &#x4E2D;&#xFF0C;&#x539F;&#x59CB;&#x6570;&#x636E;&#x7684;&#x7C7B;&#x578B;&#x90FD;&#x7528;&#x9996;&#x5B57;&#x6BCD;&#x5C0F;&#x5199;&#x7684;&#x8868;&#x793A;&#x3001;&#x539F;&#x59CB;&#x6570;&#x636E;&#x7684;&#x5305;&#x88C5;&#x5BF9;&#x8C61;&#x7528;&#x5927;&#x5199;&#x8868;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-ts">
+<span class="hljs-keyword">let</span> a: <span class="hljs-built_in">number</span> = <span class="hljs-number">1</span>
+<span class="hljs-keyword">let</span> b: <span class="hljs-built_in">Number</span> = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Number</span>(<span class="hljs-number">1</span>)
+</code></pre>
+<p>&#x9700;&#x8981;&#x7279;&#x522B;&#x63D0;&#x793A;&#x7684;&#x662F;&#xFF1A;null &#x3001;undefined &#x9664;&#x4E86;&#x662F;&#x5404;&#x81EA;&#x7684;&#x7C7B;&#x578B;&#x5916;&#xFF0C;undefined &#x548C; null &#x662F;&#x6240;&#x6709;&#x7C7B;&#x578B;&#x7684;&#x5B50;&#x7C7B;&#x578B;&#x3002;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x2018;&#x65E0;&#x5F62;&#x2019;&#xFF0C;&#x6240;&#x6709;&#x7C7B;&#x578B;&#x90FD;&#x7B26;&#x5408;&#x8FD9;&#x4E2A; &#x2018;&#x4E07;&#x80FD;&#x5F62;&#x2019;&#x3002;</p>
+<p>&#x8FD9;&#x6837;&#x5904;&#x7406;&#x662F;&#x6709;&#x73B0;&#x5B9E;&#x610F;&#x4E49;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> num: number
+</code></pre>
+<p>&#x5141;&#x8BB8;&#x8FD9;&#x6837;&#x7684;&#x5199;&#x6CD5;&#x7EE7;&#x7EED;&#x5B58;&#x5728;&#xFF0C;&#x4E0D;&#x7136;&#x521D;&#x59CB;&#x5316;&#x4E3A; undefined &#x65F6;&#x4F1A;&#x62A5;&#x9519;</p>
+<h5 id="dom-&#x548C;-bom-&#x7684;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;">DOM &#x548C; BOM &#x7684;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;</h5>
+<p>DOM &#x548C; BOM &#x63D0;&#x4F9B;&#x7684;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;&#x6709;&#xFF1A;
+Document&#x3001;HTMLElement&#x3001;Event&#x3001;NodeList &#x7B49;&#x3002;</p>
+<h5 id="ts-&#x5F15;&#x5165;&#x7684;&#x5185;&#x7F6E;&#x7C7B;&#x578B;">TS &#x5F15;&#x5165;&#x7684;&#x5185;&#x7F6E;&#x7C7B;&#x578B;</h5>
+<p>void: JS &#x6CA1;&#x6709;&#x7A7A;&#x503C;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x7C7B;&#x578B;&#x4E3A; void&#x3002;
+&#x5176;&#x5B9E; void &#x662F;&#x4E2A;&#x8054;&#x5408;&#x7C7B;&#x578B;&#xFF08;&#x7C7B;&#x578B;&#x8FD0;&#x7B97;&#x91CC;&#x4F1A;&#x63D0;&#x5230;&#xFF09;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E; <code>null | undefined</code>&#x3002;&#x56E0;&#x4E3A;&#x592A;&#x5E38;&#x7528;&#xFF0C;&#x5C31;&#x5185;&#x7F6E;&#x4E86;&#x3002;</p>
+<p>any: &#x4EFB;&#x610F;&#x7C7B;&#x578B;&#xFF0C;&#x58F0;&#x660E;&#x4E3A; any &#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x53EF;&#x4EE5;&#x8D4B;&#x4EFB;&#x4F55;&#x7C7B;&#x578B;&#x7684;&#x503C;&#x3002;&#x6240;&#x6709;&#x672A;&#x58F0;&#x660E;&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x90FD;&#x88AB;&#x9690;&#x5F0F;&#x58F0;&#x660E;&#x4E3A; any&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;Node.js &#x4E0D;&#x662F;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x7528; TS &#x5199; Node.js&#x65F6;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x5F15;&#x5165;&#x7B2C;&#x4E09;&#x65B9;&#x58F0;&#x660E;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-bash">npm install @types/node --save-dev
+</code></pre>
+<h4 id="&#x5982;&#x4F55;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;">&#x5982;&#x4F55;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;</h4>
+<h5 id="&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#x7684;&#x5F62;&#x72B6;">&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#x7684;&#x5F62;&#x72B6;</h5>
+<pre><code class="lang-ts"><span class="hljs-keyword">interface</span> Animal {
+    color: <span class="hljs-built_in">string</span>;
+    age: <span class="hljs-built_in">number</span>;
+}
+
+<span class="hljs-keyword">let</span> dog: Animal = {
+    color: <span class="hljs-string">&apos;black&apos;</span>,
+    age: <span class="hljs-number">1</span>
+};
+</code></pre>
+<p>&#x6216;&#x8005;&#xFF1A;</p>
+<pre><code class="lang-js">type Animal = {
+    color: string;
+    age: number;
+}
+
+<span class="hljs-keyword">let</span> dog: Animal = {
+    color: <span class="hljs-string">&apos;black&apos;</span>,
+    age: <span class="hljs-number">1</span>
+};
+</code></pre>
+<p>&#x8FD9;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x5728;&#x63CF;&#x8FF0;&#x5F62;&#x72B6;&#x65B9;&#x9762;&#x662F;&#x7B49;&#x4EF7;&#x7684;&#xFF0C;&#x4F46;&#x6709;&#x4E00;&#x70B9;&#x91CD;&#x8981;&#x533A;&#x522B;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">interface</span> Animal {
+    color: <span class="hljs-built_in">string</span>;
+    age: <span class="hljs-built_in">number</span>;
+}
+
+<span class="hljs-keyword">interface</span> Animal {
+    size: <span class="hljs-built_in">number</span>;
+}
+</code></pre>
+<p>&#x8FD9;&#x662F;&#x5141;&#x8BB8;&#x7684;&#xFF0C;&#x800C;&#x4E14;&#x4E24;&#x4E2A;&#x63CF;&#x8FF0;&#x4F1A;&#x5408;&#x5E76;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x76F8;&#x5F53;&#x4E8E;&#x5BF9;&#x4E0A;&#x9762;&#x7684;&#x8865;&#x5145;&#xFF08;&#x589E;&#x91CF;&#x63CF;&#x8FF0;&#xFF09;&#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x5E94;&#x8BE5;&#x7406;&#x89E3;&#x4E3A;&#x8865;&#x5145; (&#x7B49;&#x4EF7;&#x4E8E;extends&#xFF0C;&#x540E;&#x9762;&#x5373;&#x5C06;&#x8BB2;&#x5230;)&#xFF0C;&#x800C;&#x4E0D;&#x662F; <code>|</code>&#x3002;</p>
+<p>&#x4F46;&#x662F;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">type</span> Animal = {
+    color: <span class="hljs-built_in">string</span>;
+    age: <span class="hljs-built_in">number</span>;
+}
+<span class="hljs-keyword">type</span> Animal = {
+    size: <span class="hljs-built_in">number</span>;
+}
+</code></pre>
+<p>&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x4E0D;&#x5141;&#x8BB8;&#x91CD;&#x590D;&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x3002;</p>
+<p>&#x600E;&#x4E48;&#x7406;&#x89E3; type &#x548C; interface &#x7684;&#x533A;&#x522B;&#x5462;&#xFF1A;</p>
+<ul>
+<li>interface &#x662F;&#x5F62;&#x72B6;&#x58F0;&#x660E;&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x5C31;&#x50CF; function&#xFF0C;&#x5141;&#x8BB8;&#x91CD;&#x590D;&#x58F0;&#x660E;&#xFF0C;&#x4F46;&#x662F;&#x91CD;&#x590D;&#x58F0;&#x660E;&#x7684;&#x7ED3;&#x679C;&#x4E0D;&#x540C;&#xFF0C;interface &#x6267;&#x884C;&#x5408;&#x5E76;&#xFF0C;function &#x6267;&#x884C;&#x8986;&#x76D6;&#x3002;</li>
+<li>type &#x53EF;&#x4EE5;&#x7C7B;&#x6BD4;&#x5230; const &#x7684;&#x884C;&#x4E3A;&#xFF08;&#x53EA;&#x5141;&#x8BB8;&#x8D4B;&#x503C;&#x4E00;&#x6B21;&#xFF09;&#xFF0C;&#x5E76;&#x4E14;&#x7EA6;&#x675F;&#x53D8;&#x91CF;&#xFF0C;&#x53EA;&#x5141;&#x8BB8;&#x88AB; interface &#x8D4B;&#x503C;&#x3002;</li>
+</ul>
+<h6 id="&#x5B9A;&#x4E49;&#x4E0D;&#x786E;&#x5B9A;&#x5C5E;&#x6027;&#x540D;&#x7684;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;">&#x5B9A;&#x4E49;&#x4E0D;&#x786E;&#x5B9A;&#x5C5E;&#x6027;&#x540D;&#x7684;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;</h6>
+<pre><code class="lang-ts"><span class="hljs-keyword">interface</span> Obj {
+    [propName: <span class="hljs-built_in">string</span>]: <span class="hljs-built_in">any</span>;
+}
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF1A;<code>propName</code> &#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x540D;&#x662F;&#x968F;&#x610F;&#x7684;&#xFF0C;&#x6709;&#x610F;&#x4E49;&#x7684;&#x65F6;&#x5019;&#x540E;&#x9762;&#x7684;&#x7C7B;&#x578B;&#x58F0;&#x660E; &#x2014;&#x2014; string&#x3002;</p>
+<p>&#x6570;&#x7EC4;&#x4E5F;&#x662F;&#x5BF9;&#x8C61;&#xFF0C;&#x63CF;&#x8FF0;&#x6570;&#x7EC4;&#x65F6;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x6837;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">interface</span> StringArray {
+  [index: <span class="hljs-built_in">number</span>]: <span class="hljs-built_in">string</span>;
+}
+</code></pre>
+<h5 id="&#x5B9A;&#x4E49;&#x6570;&#x7EC4;&#x7684;&#x5F62;&#x72B6;">&#x5B9A;&#x4E49;&#x6570;&#x7EC4;&#x7684;&#x5F62;&#x72B6;</h5>
+<ul>
+<li>&#x7C7B;&#x578B;[] &#x8BED;&#x6CD5;</li>
+</ul>
+<pre><code class="lang-ts"><span class="hljs-keyword">let</span> fibonacci: <span class="hljs-built_in">number</span>[] = [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>];
+</code></pre>
+<p>&#x6570;&#x7EC4;&#x7684;&#x9879;&#x4E2D;&#x5FC5;&#x987B;&#x540C;&#x4E00;&#x7C7B;&#x578B;&#x3002;</p>
+<p>&#xFF08;&#x4E0B;&#x9762;&#x8FD9;&#x6BB5;&#x5148;&#x8DF3;&#x8FC7;&#xFF0C;&#x770B;&#x5B8C;&#x5168;&#x90E8;&#x518D;&#x56DE;&#x8FC7;&#x6765;&#x770B;&#xFF09;</p>
+<p>&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5185;&#x7F6E;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#xFF1A; <code>Array&lt;number&gt;</code> &#x7B49;&#x4EF7;&#x4E8E; number[]</p>
+<ul>
+<li>&#x7528;&#x63A5;&#x53E3;&#x8868;&#x793A;&#x6570;&#x7EC4;</li>
+</ul>
+<pre><code class="lang-ts"><span class="hljs-keyword">interface</span> NumberArray {
+    [index: <span class="hljs-built_in">number</span>]: <span class="hljs-built_in">number</span>;
+}
+<span class="hljs-keyword">let</span> fibonacci: NumberArray = [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>];
+</code></pre>
+<p>NumberArray &#x8868;&#x793A;&#xFF1A;&#x53EA;&#x8981;&#x7D22;&#x5F15;&#x7684;&#x7C7B;&#x578B;&#x662F;&#x6570;&#x5B57;&#x65F6;&#xFF0C;&#x90A3;&#x4E48;&#x503C;&#x7684;&#x7C7B;&#x578B;&#x5FC5;&#x987B;&#x662F;&#x6570;&#x5B57;&#x3002;</p>
+<p>&#x8FD9;&#x79CD;&#x5199;&#x6CD5;&#x53EA;&#x7528;&#x5728;&#x7C7B;&#x6570;&#x7EC4;&#x7684;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#x4E2D;&#xFF0C;&#x56E0;&#x4E3A;&#x7C7B;&#x6570;&#x7EC4;&#x672C;&#x8D28;&#x65F6;&#x5BF9;&#x8C61;&#xFF0C;&#x4F7F;&#x7528;&#x6570;&#x7EC4;&#x7C7B;&#x578B;&#x7EA6;&#x675F;&#x4F1A;&#x62A5;&#x9519;&#x3002;&#x6BD4;&#x5982;&#x51FD;&#x6570;&#x7684; arguments&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sum</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">let</span> args: <span class="hljs-built_in">number</span>[] = <span class="hljs-built_in">arguments</span>;
+}
+
+<span class="hljs-comment">// Type &apos;IArguments&apos; is missing the following properties from type &apos;number[]&apos;: pop, push, concat, join, and 24 more.</span>
+</code></pre>
+<p>&#x6B63;&#x786E;&#x7684;&#x7C7B;&#x578B;&#x63CF;&#x8FF0;&#x5E94;&#x8BE5;&#x662F;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sum</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">let</span> args: {
+        [index: <span class="hljs-built_in">number</span>]: <span class="hljs-built_in">number</span>;
+        length: <span class="hljs-built_in">number</span>;
+        callee: <span class="hljs-built_in">Function</span>;
+    } = <span class="hljs-built_in">arguments</span>;
+}
+</code></pre>
+<h5 id="&#x901A;&#x8FC7;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#x6765;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;">&#x901A;&#x8FC7;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#x6765;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;</h5>
+<ul>
+<li>typeof &#x8FD0;&#x7B97;&#x7B26;&#xFF1A;TS &#x589E;&#x5F3A;&#x4E86; typeof&#xFF0C;&#x901A;&#x8FC7;&#x5B83;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x5F97;&#x7C7B;&#x578B;&#x3002;</li>
+</ul>
+<pre><code class="lang-ts"><span class="hljs-keyword">type</span> T = <span class="hljs-keyword">typeof</span> {a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span>}
+
+<span class="hljs-comment">// T &#x7B49;&#x4EF7;&#x4E8E;</span>
+
+<span class="hljs-keyword">interface</span> T {
+    a: <span class="hljs-built_in">number</span>,
+    b: <span class="hljs-built_in">number</span>
+}
+</code></pre>
+<ul>
+<li>enum: <code>enum &#x5BF9;&#x8C61;&#x540D; {key = value}</code></li>
+</ul>
+<p>&#x5F53;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x7684;&#x503C;&#x90FD;&#x662F;&#x539F;&#x59CB;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x65F6;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x7C7B;&#x578B;&#x5C31;&#x53EF;&#x4EE5;&#x88AB;&#x63A8;&#x65AD;&#x51FA;&#x6765;&#xFF08;&#x4F7F;&#x7528; typeof &#x5373;&#x53EF;&#x5F97;&#x5230;&#x8FD9;&#x7C7B;&#x5BF9;&#x8C61;&#x7684;&#x7C7B;&#x578B;&#xFF09;&#x3002;&#x8FD9;&#x65F6;&#x6211;&#x4EEC;&#x901A;&#x5E38;&#x8FD8;&#x9700;&#x8981;&#x540C;&#x65F6;&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#xFF0C;&#x6765;&#x7EA6;&#x675F;&#x53D8;&#x91CF;&#x53EA;&#x80FD;&#x88AB;&#x67D0;&#x4E2A;&#x5BF9;&#x8C61;&#x7684; value &#x8D4B;&#x503C;&#x3002;</p>
+<p>enum &#x5173;&#x952E;&#x5B57;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x8FD9;&#x4E2A;&#x9700;&#x6C42;&#x573A;&#x666F;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">enum</span> E1 {
+    A = <span class="hljs-number">1</span>, B, C
+}
+</code></pre>
+<p>&#x8FD9;&#x6837;&#x5C31;&#x4F1A;&#x751F;&#x6210;&#x4E00;&#x4E2A; E1 &#x5BF9;&#x8C61;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">const</span> E1 = {
+    A: <span class="hljs-number">1</span>,
+    B: <span class="hljs-number">2</span>,
+    C: <span class="hljs-number">3</span>
+}
+</code></pre>
+<p>&#x53CA;&#x7531;&#x6B64;&#x63A8;&#x65AD;&#x51FA;&#x6765;&#x7684;&#x540C;&#x540D;&#x7C7B;&#x578B; E1&#x3002;</p>
+<pre><code class="lang-ts"><span class="hljs-comment">// &#x5176;&#x5B9E;&#x4E0D;&#x5B8C;&#x5168;&#x7B49;&#x4EF7;&#xFF0C;&#x6682;&#x65F6;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x8FD9;&#x6837;&#xFF0C;&#x9047;&#x5230;&#x95EE;&#x9898;&#x770B;&#x63D0;&#x793A;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;</span>
+<span class="hljs-keyword">type</span> E1 = <span class="hljs-number">1</span> | <span class="hljs-number">2</span> | <span class="hljs-number">3</span>
+</code></pre>
+<p>&#x5F88;&#x65B9;&#x4FBF;&#x6709;&#x6CA1;&#x6709;&#xFF01;
+&#x8FD9;&#x4E2A;&#x7C7B;&#x578B;&#x4E5F;&#x53EB;&#x679A;&#x4E3E;&#x7C7B;&#x578B;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x53EA;&#x80FD;&#x5728;&#x6709;&#x9650;&#x7684;&#x51E0;&#x4E2A;&#x503C;&#x4E2D;&#x9009;&#x4E00;&#x4E2A;&#xFF0C;&#x800C;&#x4E14;&#x8FD9;&#x4E9B;&#x503C;&#x90FD;&#x662F;&#x539F;&#x59CB;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;(&#x5728;&#x6570;&#x7EC4;&#x4E2D;&#xFF0C;&#x7C7B;&#x4F3C;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x503C;&#x90FD;&#x662F;&#x539F;&#x59CB;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x90A3;&#x4E48;&#x76F4;&#x63A5;&#x8FD9;&#x4E2A;&#x6570;&#x7EC4;&#x4E5F;&#x53EB;&#xFF1A;&#x5143;&#x7EC4; Tuple)</p>
+<p>&#x65E2;&#x7136;&#x8BB2;&#x5230;&#x4E86;&#x679A;&#x4E3E;&#x7C7B;&#x578B;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x5F52;&#x7EB3;&#x4E0B;&#x679A;&#x4E3E;&#x7C7B;&#x578B;&#x7684;&#x884C;&#x4E3A;&#xFF1A;</p>
+<ul>
+<li>&#x7F3A;&#x7701;&#x503C;&#x7684;&#x586B;&#x5145;&#xFF1A;&#x5168;&#x90E8;&#x7F3A;&#x7701;&#xFF0C;&#x4F1A;&#x4ECE;0&#x5F00;&#x59CB;&#x9012;&#x589E;&#x586B;&#x5145;&#x3002;&#x5176;&#x4ED6;&#x60C5;&#x51B5;&#x6839;&#x636E;&#x63D0;&#x793A;&#x884C;&#x4E8B;&#x5373;&#x53EF;&#x3002;</li>
+<li>&#x5BF9;&#x53D8;&#x91CF;&#x8D4B;&#x679A;&#x4E3E;&#x503C;&#x65F6;&#xFF0C;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x679A;&#x4E3E;&#x503C;&#x7684;&#x5B57;&#x9762;&#x91CF;&#x503C;&#xFF0C;&#x8981;&#x7528;&#x5BF9;&#x8C61;&#x5F15;&#x7528;&#x3002;</li>
+</ul>
+<pre><code class="lang-ts"><span class="hljs-keyword">const</span> E1 = {
+    A: <span class="hljs-number">1</span>,
+    B: <span class="hljs-string">&apos;2&apos;</span>,
+    C: <span class="hljs-number">3</span>
+}
+
+<span class="hljs-keyword">const</span> b: E1 = E1.B <span class="hljs-comment">// &#x4E0D;&#x8981;&#x76F4;&#x63A5;  const b: E1 = &apos;2&apos;</span>
+</code></pre>
+<h5 id="&#x901A;&#x8FC7;&#x5F15;&#x7528;&#x5BF9;&#x8C61;&#x7684;-&#x5C5E;&#x6027;&#x3001;&#x65B9;&#x6CD5;&#xFF0C;&#x6765;&#x5F15;&#x7528;&#x5176;&#x5DF2;&#x5B9A;&#x4E49;&#x7684;&#x7C7B;&#x578B;">&#x901A;&#x8FC7;&#x5F15;&#x7528;&#x5BF9;&#x8C61;&#x7684; &#x5C5E;&#x6027;&#x3001;&#x65B9;&#x6CD5;&#xFF0C;&#x6765;&#x5F15;&#x7528;&#x5176;&#x5DF2;&#x5B9A;&#x4E49;&#x7684;&#x7C7B;&#x578B;</h5>
+<p>&#x770B;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-comment">// &#x76F4;&#x63A5;&#x5F15;&#x7528; string &#x4E0A;&#x7684; charAt &#x65B9;&#x6CD5;&#x6765;&#x5F15;&#x7528;&#x8BE5;&#x51FD;&#x6570;&#x7684;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;</span>
+<span class="hljs-keyword">type</span> P3 = <span class="hljs-built_in">string</span>[<span class="hljs-string">&quot;charAt&quot;</span>];  <span class="hljs-comment">// (pos: number =&gt; string</span>
+<span class="hljs-keyword">type</span> P4 = <span class="hljs-built_in">string</span>[][<span class="hljs-string">&quot;push&quot;</span>];  <span class="hljs-comment">// (...items: string[]) =&gt; number</span>
+<span class="hljs-keyword">type</span> P5 = <span class="hljs-built_in">string</span>[][<span class="hljs-number">0</span>];  <span class="hljs-comment">// string</span>
+</code></pre>
+<h5 id="&#x5B9A;&#x4E49;&#x7C7B;&#x7684;&#x7C7B;&#x578B;">&#x5B9A;&#x4E49;&#x7C7B;&#x7684;&#x7C7B;&#x578B;</h5>
+<p>&#x7C7B;&#x7684;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#x5FC5;&#x987B;&#x4F34;&#x968F;&#x7C7B;&#x7684;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">class</span> Greeter {
+    greeting: <span class="hljs-built_in">string</span>;
+    <span class="hljs-keyword">constructor</span>(message: string) {
+        <span class="hljs-keyword">this</span>.greeting = message;
+    }
+    greet() {
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Hello, &quot;</span> + <span class="hljs-keyword">this</span>.greeting;
+    }
+}
+
+<span class="hljs-keyword">let</span> greeter: Greeter;
+greeter = <span class="hljs-keyword">new</span> Greeter(<span class="hljs-string">&quot;world&quot;</span>);
+<span class="hljs-built_in">console</span>.log(greeter.greet());
+</code></pre>
+<p>&#x58F0;&#x660E;&#x7C7B;&#x7684;&#x540C;&#x65F6;&#xFF0C;&#x83B7;&#x5F97;&#x4E86;&#x4E24;&#x4E2A;&#x7C7B;&#x578B;&#xFF1A;</p>
+<ul>
+<li>&#x7C7B;&#x5B9E;&#x4F8B;&#x7684;&#x7C7B;&#x578B;&#xFF1A;&#x548C;&#x7C7B;&#x540D;&#xFF08;Greeter&#xFF09;&#x540C;&#x540D;&#x7684;&#x5B9E;&#x4F8B;&#x7684;&#x7C7B;&#x578B;&#xFF08;Greeter&#xFF09;&#xFF0C;&#x8BE5;&#x7C7B;&#x578B;&#x53EF;&#x4EE5;&#x7528;&#x5728;&#x4EFB;&#x4F55;&#x53EF;&#x4EE5; interface &#x5408;&#x6CD5;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x6BD4;&#x5982;</li>
+</ul>
+<pre><code class="lang-ts"><span class="hljs-keyword">let</span> greeter: Greeter;
+
+<span class="hljs-comment">// or interface extends &#x4E4B;&#x540E;</span>
+
+<span class="hljs-keyword">class</span> Point {
+    x: <span class="hljs-built_in">number</span>;
+    y: <span class="hljs-built_in">number</span>;
+}
+
+<span class="hljs-keyword">interface</span> Point3d <span class="hljs-keyword">extends</span> Point {
+    z: <span class="hljs-built_in">number</span>;
+}
+
+<span class="hljs-keyword">let</span> point3d: Point3d = {x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span>, z: <span class="hljs-number">3</span>};
+</code></pre>
+<ul>
+<li>&#x7C7B;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x8981;&#x8BFB;&#x53D6;&#x7C7B;&#x7684;&#x7C7B;&#x578B;&#x5FC5;&#x987B;&#x4F7F;&#x7528; typeof &#x8FD0;&#x7B97;&#x7B26;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-ts"><span class="hljs-keyword">class</span> Greeter {
+    <span class="hljs-keyword">static</span> standardGreeting = <span class="hljs-string">&quot;Hello, there&quot;</span>;
+    greeting: <span class="hljs-built_in">string</span>;
+    greet() {
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.greeting) {
+            <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Hello, &quot;</span> + <span class="hljs-keyword">this</span>.greeting;
+        }
+        <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">return</span> Greeter.standardGreeting;
+        }
+    }
+}
+
+<span class="hljs-keyword">let</span> greeter1: Greeter;
+greeter1 = <span class="hljs-keyword">new</span> Greeter();
+<span class="hljs-built_in">console</span>.log(greeter1.greet());
+
+<span class="hljs-keyword">let</span> greeterMaker: <span class="hljs-keyword">typeof</span> Greeter = Greeter;
+greeterMaker.standardGreeting = <span class="hljs-string">&quot;Hey there!&quot;</span>;
+
+<span class="hljs-keyword">let</span> greeter2: Greeter = <span class="hljs-keyword">new</span> greeterMaker();
+<span class="hljs-built_in">console</span>.log(greeter2.greet());
+</code></pre>
+<p>&#x5F53;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x7528;&#x6765;&#x5BB9;&#x7EB3;&#x7C7B;&#x672C;&#x8EAB;&#x65F6;&#xFF0C;&#x8FD9;&#x6837;&#x7528;&#x3002;</p>
+<h5 id="&#x901A;&#x8FC7;&#x5B9A;&#x4E49;-class-&#x6765;&#x5B9A;&#x4E49;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x7C7B;&#x578B;">&#x901A;&#x8FC7;&#x5B9A;&#x4E49; class &#x6765;&#x5B9A;&#x4E49;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x7C7B;&#x578B;</h5>
+<p>&#x4E0A;&#x9762;&#x63D0;&#x5230;&#xFF0C;&#x4F34;&#x968F;&#x7C7B;&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x4F1A;&#x540C;&#x65F6;&#x5B9A;&#x4E49;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x7C7B;&#x578B;&#x3002;</p>
+<h5 id="&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x7684;&#x5F62;&#x72B6;">&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x7684;&#x5F62;&#x72B6;</h5>
+<p>&#x51FD;&#x6570;&#x5F62;&#x72B6;&#x7531;&#x53C2;&#x6570;&#x548C;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x7C7B;&#x578B;&#x51B3;&#x5B9A;</p>
+<pre><code class="lang-ts">(x: <span class="hljs-built_in">number</span>, y: <span class="hljs-built_in">number</span>) =&gt; <span class="hljs-built_in">number</span>
+</code></pre>
+<p>&#x5F88;&#x50CF;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7ED9;&#x8FD9;&#x4E2A;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#x8D77;&#x4E2A;&#x540D;&#x5B57;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">type</span> Func = (x: <span class="hljs-built_in">number</span>, y: <span class="hljs-built_in">number</span>) =&gt; <span class="hljs-built_in">number</span>
+</code></pre>
+<p>&#x4F7F;&#x7528; interface &#x5B9A;&#x4E49;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">interface</span> SearchFunc {
+    (source: <span class="hljs-built_in">string</span>, subString: <span class="hljs-built_in">string</span>): <span class="hljs-built_in">boolean</span>;
+}
+
+<span class="hljs-keyword">let</span> mySearch: SearchFunc;
+mySearch = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">source: <span class="hljs-built_in">string</span>, subString: <span class="hljs-built_in">string</span></span>) </span>{
+    <span class="hljs-keyword">return</span> source.search(subString) !== <span class="hljs-number">-1</span>;
+}
+</code></pre>
+<p>&#x4F7F;&#x7528; function &#x5B9A;&#x4E49;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reverse</span>(<span class="hljs-params">x: <span class="hljs-built_in">number</span></span>): <span class="hljs-title">number</span></span>;
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x5B9A;&#x4E49;&#x4E86; reverse &#x51FD;&#x6570;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x540E;&#x9762;&#x8981;&#x7D27;&#x8DDF;&#x7740;&#x540C;&#x540D;&#x51FD;&#x6570;&#x7684;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reverse</span>(<span class="hljs-params">x: <span class="hljs-built_in">number</span></span>): <span class="hljs-title">number</span></span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reverse</span>(<span class="hljs-params">x: <span class="hljs-built_in">number</span></span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Number</span>(x.toString().split(<span class="hljs-string">&apos;&apos;</span>).reverse().join(<span class="hljs-string">&apos;&apos;</span>))
+}
+</code></pre>
+<p>&#x548C;&#x91CD;&#x590D;&#x58F0;&#x660E; interface&#x4F1A;&#x8FDB;&#x884C;&#x7C7B;&#x578B;&#x5408;&#x5E76;&#x4E00;&#x6837;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; function &#x91CD;&#x590D;&#x58F0;&#x660E;&#x51FD;&#x6570;&#x7C7B;&#x578B;&#xFF0C;&#x6765;&#x8FDB;&#x884C;&#x5408;&#x5E76;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reverse</span>(<span class="hljs-params">x: <span class="hljs-built_in">number</span></span>): <span class="hljs-title">number</span></span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reverse</span>(<span class="hljs-params">x: <span class="hljs-built_in">string</span></span>): <span class="hljs-title">string</span></span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reverse</span>(<span class="hljs-params">x: <span class="hljs-built_in">number</span> | <span class="hljs-built_in">string</span></span>): <span class="hljs-title">number</span> | <span class="hljs-title">string</span> </span>{
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> x === <span class="hljs-string">&apos;number&apos;</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">Number</span>(x.toString().split(<span class="hljs-string">&apos;&apos;</span>).reverse().join(<span class="hljs-string">&apos;&apos;</span>));
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> x === <span class="hljs-string">&apos;string&apos;</span>) {
+        <span class="hljs-keyword">return</span> x.split(<span class="hljs-string">&apos;&apos;</span>).reverse().join(<span class="hljs-string">&apos;&apos;</span>);
+    }
+}
+</code></pre>
+<p>&#x901A;&#x8FC7;&#x5408;&#x5E76;&#x5B9A;&#x4E49;&#xFF0C;&#x5B9E;&#x73B0;&#x4E86;&#x8FD9;&#x6837;&#x7684;&#x7C7B;&#x578B;&#x7EA6;&#x675F;&#xFF1A;&#x8F93;&#x5165;&#x4E3A;&#x6570;&#x5B57;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8F93;&#x51FA;&#x4E5F;&#x5E94;&#x8BE5;&#x4E3A;&#x6570;&#x5B57;&#xFF0C;&#x8F93;&#x5165;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8F93;&#x51FA;&#x4E5F;&#x5E94;&#x8BE5;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<p>TS&#x4F1A;&#x4ECE;&#x6700;&#x524D;&#x9762;&#x7684;&#x51FD;&#x6570;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#x5F00;&#x59CB;&#x5339;&#x914D;&#x3002;</p>
+<h6 id="&#x51E0;&#x79CD;&#x7279;&#x6B8A;&#x53C2;&#x6570;&#x7684;&#x7C7B;&#x578B;&#x58F0;&#x660E;">&#x51E0;&#x79CD;&#x7279;&#x6B8A;&#x53C2;&#x6570;&#x7684;&#x7C7B;&#x578B;&#x58F0;&#x660E;</h6>
+<ul>
+<li>&#x53EF;&#x9009;&#x53C2;&#x6570;:</li>
+</ul>
+<p>TS &#x4E2D;&#x8F93;&#x5165;&#x591A;&#x4F59;&#x7684;&#xFF08;&#x6216;&#x8005;&#x5C11;&#x4E8E;&#x8981;&#x6C42;&#x7684;&#xFF09;&#x53C2;&#x6570;&#xFF0C;&#x662F;&#x4E0D;&#x5141;&#x8BB8;&#x7684;&#x3002;&#x4F46;&#x63D0;&#x4F9B;&#x4E86;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x8BED;&#x6CD5;&#xFF1A;&#x4E0E;&#x63A5;&#x53E3;&#x4E2D;&#x7684;&#x53EF;&#x9009;&#x5C5E;&#x6027;&#x7C7B;&#x4F3C;&#xFF0C;&#x7528; ? &#x8868;&#x793A;&#x53EF;&#x9009;&#x7684;&#x53C2;&#x6570;</p>
+<pre><code class="lang-ts"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">buildName</span>(<span class="hljs-params">firstName: <span class="hljs-built_in">string</span>, lastName?: <span class="hljs-built_in">string</span></span>) </span>{
+    <span class="hljs-keyword">if</span> (lastName) {
+        <span class="hljs-keyword">return</span> firstName + <span class="hljs-string">&apos; &apos;</span> + lastName;
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">return</span> firstName;
+    }
+}
+<span class="hljs-keyword">let</span> tomcat = buildName(<span class="hljs-string">&apos;Tom&apos;</span>, <span class="hljs-string">&apos;Cat&apos;</span>);
+<span class="hljs-keyword">let</span> tom = buildName(<span class="hljs-string">&apos;Tom&apos;</span>);
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x540E;&#x9762;&#x4E0D;&#x5141;&#x8BB8;&#x518D;&#x51FA;&#x73B0;&#x5FC5;&#x9700;&#x53C2;&#x6570;&#x4E86;&#xFF0C;&#x8FD9;&#x4E2A;&#x5F88;&#x5BB9;&#x6613;&#x7406;&#x89E3;</p>
+<ul>
+<li>&#x53C2;&#x6570;&#x9ED8;&#x8BA4;&#x503C;</li>
+</ul>
+<p>ES6 &#x652F;&#x6301;&#x7ED9;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x6DFB;&#x52A0;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;TS &#x4F1A;&#x5C06;&#x6DFB;&#x52A0;&#x4E86;&#x9ED8;&#x8BA4;&#x503C;&#x7684;&#x53C2;&#x6570;&#x8BC6;&#x522B;&#x4E3A;&#x53EF;&#x9009;&#x53C2;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-ts">function buildName(firstName: string, lastName: string = &apos;Cat&apos;) {
+    return firstName + &apos; &apos; + lastName;
+}
+let tomcat = buildName(&apos;Tom&apos;, &apos;Cat&apos;);
+let tom = buildName(&apos;Tom&apos;);
+</code></pre>
+<ul>
+<li>&#x5269;&#x4F59;&#x53C2;&#x6570;</li>
+</ul>
+<p>ES6 &#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; ...rest &#x7684;&#x65B9;&#x5F0F;&#x83B7;&#x53D6;&#x51FD;&#x6570;&#x4E2D;&#x7684;&#x5269;&#x4F59;&#x53C2;&#x6570;&#xFF08;rest &#x53C2;&#x6570;&#xFF09;&#xFF0C;rest &#x5176;&#x5B9E;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6570;&#x7EC4;&#x7684;&#x7C7B;&#x578B;&#x6765;&#x5B9A;&#x4E49;&#x5B83;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">push</span>(<span class="hljs-params">array: <span class="hljs-built_in">any</span>[], ...items: <span class="hljs-built_in">any</span>[]</span>) </span>{
+    items.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">item</span>) </span>{
+        array.push(item);
+    });
+}
+
+<span class="hljs-keyword">let</span> a = [];
+push(a, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>);
+</code></pre>
+<h5 id="&#x5B57;&#x9762;&#x91CF;&#x7C7B;&#x578B;&#xFF08;literal-type&#xFF09;">&#x5B57;&#x9762;&#x91CF;&#x7C7B;&#x578B;&#xFF08;literal Type&#xFF09;</h5>
+<pre><code class="lang-ts"><span class="hljs-keyword">type</span> A = <span class="hljs-string">&apos;a&apos;</span>
+<span class="hljs-keyword">type</span> S = <span class="hljs-built_in">string</span>
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF1A; <code>type A = &apos;a&apos;</code>&#xFF0C;&#x8FD9;&#x4E2A;&#x7C7B;&#x578B;&#x9650;&#x5B9A;&#x7684;&#x4E0D;&#x5728;&#x662F;&#x7C7B;&#x4F3C; string &#x7684;&#x4E00;&#x4E2A;&#x8303;&#x56F4;&#xFF0C;&#x800C;&#x662F;&#x5177;&#x4F53;&#x7684;&#x5355;&#x503C;&#xFF0C;&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#x8FD8;&#x4E00;&#x4E2A;&#x540D;&#x5B57;&#xFF1A;&#x5355;&#x4F8B;&#x7C7B;&#x578B;&#xFF08;Singleton Type&#xFF09;&#x3002;</p>
+<h5 id="&#x4FEE;&#x9970;&#x7B26;">&#x4FEE;&#x9970;&#x7B26;</h5>
+<p>&#x901A;&#x8FC7;&#x8FD9;&#x4E9B;&#x4FEE;&#x9970;&#x7B26;&#xFF0C;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x7C7B;&#x578B;&#x9A8C;&#x8BC1;&#x65F6;&#x7684;&#x884C;&#x4E3A;&#x3002;</p>
+<ul>
+<li>?: &#x770B;&#x4F8B;&#x5B50;</li>
+</ul>
+<pre><code class="lang-ts"><span class="hljs-keyword">interface</span> Person {
+    name: <span class="hljs-built_in">string</span>;
+    age: <span class="hljs-built_in">number</span>;
+    location: <span class="hljs-built_in">string</span>;
+}
+<span class="hljs-comment">// Person&#x7684;&#x53EF;&#x9009;&#x5C5E;&#x6027;&#x7C7B;&#x578B;&#x5C06;&#x662F;&#x8FD9;&#x6837;&#xFF1A;</span>
+<span class="hljs-keyword">interface</span> PartialPerson {
+    name?: <span class="hljs-built_in">string</span>;
+    age?: <span class="hljs-built_in">number</span>;
+    location?: <span class="hljs-built_in">string</span>;
+}
+</code></pre>
+<h4 id="&#x7C7B;&#x578B;&#x7F3A;&#x5931;&#x65F6;&#x7684;&#x884C;&#x4E3A;">&#x7C7B;&#x578B;&#x7F3A;&#x5931;&#x65F6;&#x7684;&#x884C;&#x4E3A;</h4>
+<p>&#x5F53;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x7C7B;&#x578B;&#x65F6;&#xFF0C;TS &#x4F9D;&#x636E;&#x4E00;&#x5957;&#x89C4;&#x5219;&#x63A8;&#x65AD;&#x51FA;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x3002;</p>
+<p>&#x8FD9;&#x5957;&#x89C4;&#x5219;&#x662F;&#xFF1A;</p>
+<ul>
+<li>&#x6839;&#x636E;&#x521D;&#x59CB;&#x5316;&#x53D8;&#x91CF;&#x65F6;&#x7684;&#x503C;&#x7C7B;&#x578B;&#xFF0C;&#x6CE8;&#x610F;&#x53EA;&#x6839;&#x636E;&#x521D;&#x59CB;&#x5316;&#x65F6;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x63A8;&#x65AD;&#xFF0C;&#x672A;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x5C31;&#x88AB;&#x63A8;&#x65AD;&#x4E3A; any&#x3002;</li>
+</ul>
+<pre><code class="lang-ts"><span class="hljs-keyword">let</span> a = <span class="hljs-number">1</span>
+</code></pre>
+<p>&#x7B49;&#x4EF7;&#x4E8E;</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">let</span> a: <span class="hljs-built_in">number</span> = <span class="hljs-number">1</span>
+</code></pre>
+<pre><code class="lang-ts"><span class="hljs-keyword">let</span> a;
+a = <span class="hljs-number">1</span>
+</code></pre>
+<p>&#x7B49;&#x4EF7;&#x4E8E;</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">let</span> a: <span class="hljs-built_in">any</span>;
+a = <span class="hljs-number">1</span>
+</code></pre>
+<ul>
+<li>&#x57FA;&#x4E8E;&#x63A7;&#x5236;&#x6D41;&#x7684;&#x7C7B;&#x578B;&#x5206;&#x6790;&#xFF08;Control Flow Based Type Analysis&#xFF09;&#x4EE5;&#x53CA;typeof&#x7B49;&#x7C7B;&#x578B;&#x54E8;&#x5175;&#xFF08;Type Guard&#xFF09;&#x63A8;&#x65AD;&#x6BCF;&#x4E2A;if else &#x5206;&#x652F;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x7C7B;&#x578B;&#x3002;&#x76F4;&#x63A5;&#x770B;&#x4F8B;&#x5B50;&#x6BD4;&#x8F83;&#x597D;&#x8BF4;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-ts"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">triple</span>(<span class="hljs-params">input: <span class="hljs-built_in">number</span> | <span class="hljs-built_in">string</span></span>): <span class="hljs-title">number</span> | <span class="hljs-title">string</span> </span>{
+  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> input === <span class="hljs-string">&apos;number&apos;</span>) {
+    <span class="hljs-keyword">return</span> input * <span class="hljs-number">3</span>;
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">return</span> (<span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(<span class="hljs-number">4</span>)).join(input);
+  }
+}
+</code></pre>
+<p>TS &#x53EF;&#x4EE5;&#x5206;&#x6790;&#x51FA;&#x4E0A;&#x8FF0;&#x793A;&#x4F8B;&#x4E2D; if &#x5206;&#x652F;&#x4E2D;&#x7684;input&#x4E00;&#x5B9A;&#x662F; number &#x7C7B;&#x578B;&#xFF0C;else &#x5206;&#x652F;input&#x53EA;&#x80FD;&#x662F;&#x5176;&#x4F59;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x5373; string&#x3002;</p>
+<p>&#x77E5;&#x9053; TS &#x6709;&#x8FD9;&#x4E2A;&#x63A8;&#x65AD;&#x80FD;&#x529B;&#x5373;&#x53EF;&#xFF0C;&#x540D;&#x5B57;&#x65E0;&#x6240;&#x8C13;&#x3002;</p>
+<h4 id="&#x53EF;&#x4EE5;&#x5BF9;&#x7C7B;&#x578B;&#x8FDB;&#x884C;&#x7F16;&#x7A0B;&#x5417;&#xFF08;&#x7C7B;&#x578B;&#x8FD0;&#x7B97;&#xFF09;">&#x53EF;&#x4EE5;&#x5BF9;&#x7C7B;&#x578B;&#x8FDB;&#x884C;&#x7F16;&#x7A0B;&#x5417;&#xFF08;&#x7C7B;&#x578B;&#x8FD0;&#x7B97;&#xFF09;</h4>
+<p>&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x662F;&#x5426;&#x5141;&#x8BB8;&#x5BF9;&#x7C7B;&#x578B;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x7C7B;&#x578B;&#x3002;</p>
+<h5 id="&#x5C5E;&#x6027;&#x8BBF;&#x95EE;">&#x5C5E;&#x6027;&#x8BBF;&#x95EE;</h5>
+<p>&#x5F53;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5BF9;&#x7C7B;&#x578B;&#x5C5E;&#x6027;&#x8BBF;&#x95EE;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5F15;&#x7528;&#x5C5E;&#x6027;&#x7684;&#x7C7B;&#x578B;&#xFF1A;</p>
+<p>&#x8BED;&#x6CD5;&#x548C;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x8BBF;&#x95EE;&#x4E00;&#x81F4;</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">interface</span> I1 {
+    x: <span class="hljs-built_in">any</span>;
+}
+
+<span class="hljs-keyword">interface</span> I2 {
+    y: {
+        a: I1,
+        b: I1,
+        c: I1
+    }
+    z: <span class="hljs-built_in">any</span>
+}
+
+<span class="hljs-keyword">let</span> myVar: I2[<span class="hljs-string">&apos;y&apos;</span>];  <span class="hljs-comment">// indexed access type</span>
+</code></pre>
+<p>&#x73B0;&#x5728; myVar &#x5C31;&#x6709;&#x4E86; I2.y &#x7684;&#x7C7B;&#x578B;&#x3002;</p>
+<h5 id="&#x5373;&#x65F6;&#x8FD0;&#x7B97;">&#x5373;&#x65F6;&#x8FD0;&#x7B97;</h5>
+<h6 id="">&amp;</h6>
+<p>&#x770B;&#x5230;&#x8FD9;&#x4E2A;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x60F3; interface &#x91CD;&#x590D;&#x58F0;&#x660E;&#x5C31;&#x597D;&#x4E86;&#xFF08;&#x65B0;&#x7C7B;&#x578B;&#x5305;&#x542B;&#x4E24;&#x4E2A;&#x7C7B;&#x578B;&#x4E2D;&#x5168;&#x90E8;&#x5C5E;&#x6027;&#xFF09;&#x3002;</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">type</span> Point = {
+    x: <span class="hljs-built_in">number</span>;
+    y: <span class="hljs-built_in">number</span>;
+};
+
+<span class="hljs-keyword">type</span> A = {
+    a: <span class="hljs-built_in">number</span>
+}
+
+<span class="hljs-keyword">type</span> C = Point &amp; A
+
+<span class="hljs-keyword">const</span> test: C = {
+    x: <span class="hljs-number">1</span>,
+    y: <span class="hljs-number">2</span>,
+    a: <span class="hljs-number">1</span>
+}
+</code></pre>
+<h6 id="extends">extends</h6>
+<ol>
+<li>&#x5B9A;&#x4E49;&#x63A5;&#x53E3;&#xFF0C;&#x4F7F;&#x7528; extends &#x7EE7;&#x627F;&#x4E00;&#x4E2A;&#x5DF2;&#x5B9A;&#x4E49;&#x7684;&#x63A5;&#x53E3;&#x6216;&#x8005;&#x7C7B;</li>
+</ol>
+<pre><code class="lang-ts">TypeA extends TypeB
+</code></pre>
+<p>&#x5E38;&#x5728; interface &#x58F0;&#x660E;&#x65F6;&#x4F7F;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">interface</span> Shape {
+    color: <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-keyword">interface</span> PenStroke {
+    penWidth: <span class="hljs-built_in">number</span>;
+}
+
+<span class="hljs-keyword">interface</span> Square <span class="hljs-keyword">extends</span> Shape, PenStroke {
+    sideLength: <span class="hljs-built_in">number</span>;
+}
+
+<span class="hljs-keyword">let</span> square = &lt;Square&gt;{};
+square.color = <span class="hljs-string">&quot;blue&quot;</span>;
+square.sideLength = <span class="hljs-number">10</span>;
+square.penWidth = <span class="hljs-number">5.0</span>;
+</code></pre>
+<p>&#x770B;&#x5230; extends&#xFF0C;&#x7B49;&#x4EF7;&#x4E8E; <code>Shape &amp; PenStroke</code>&#xFF0C;&#x548C; interface &#x91CD;&#x590D;&#x58F0;&#x660E;&#x4E00;&#x6837;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x6BCF;&#x6B21;&#x58F0;&#x660E;&#x7ED9;&#x4E86;&#x4E0D;&#x540C;&#x7684;&#x540D;&#x5B57;&#x3002;</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">class</span> Control {
+    <span class="hljs-keyword">private</span> state: <span class="hljs-built_in">any</span>;
+}
+
+<span class="hljs-keyword">interface</span> SelectableControl <span class="hljs-keyword">extends</span> Control {
+    select(): <span class="hljs-built_in">void</span>;
+}
+</code></pre>
+<p>&#x5F53; extends &#x7C7B;&#x65F6;&#xFF0C;&#x5F53;&#x505A; extends &#x7C7B;&#x7684;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#x3002;</p>
+<ol>
+<li>&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;</li>
+</ol>
+<pre><code class="lang-ts">TypeA extends TypeB
+</code></pre>
+<p>&#x65AD;&#x8A00; TypeA &#x6EE1;&#x8DB3; TypeB&#x6240;&#x6709;&#x7684;&#x5C5E;&#x6027;&#x8981;&#x6C42;&#xFF0C;&#x53EF;&#x4EE5;&#x8D85;&#x51FA;&#x3002;&#x6362;&#x53E5;&#x8BDD; TypeB &#x4E3A; TypeA&#x7684;&#x6700;&#x5C0F;&#x7EA6;&#x675F;&#x3002;</p>
+<h6 id="is">is</h6>
+<p>&#x4F5C;&#x4E3A;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x548C; extends &#x6BD4;&#x8F83;&#x7740;&#x770B;&#xFF1A;</p>
+<pre><code class="lang-ts">TypeA extends TypeB
+TypeA is TypeB
+</code></pre>
+<p>is &#x662F;&#x8868;&#x793A; TypeA &#x548C; TypeB &#x5F62;&#x72B6;&#x4E00;&#x81F4;&#xFF0C;&#x5C5E;&#x6027;&#x4E0D;&#x591A;&#x4E0D;&#x5C11;&#x3002;</p>
+<h6 id="">|</h6>
+<p>&#x770B;&#x5230;&#x8FD9;&#x4E2A;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x5E94;&#x8BE5;&#x8FDB;&#x884C;&#x5982;&#x4E0B;&#x7B49;&#x4EF7;&#x8F6C;&#x6362;&#xFF1A;&#x6BD4;&#x5982; <code>A | B =&gt; A || B || A &amp; B</code>, | &#x5230;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26; || &#x7684;&#x8F6C;&#x6362;&#x3002;</p>
+<h6 id="keyof-t">keyof T</h6>
+<p>&#x5148;&#x770B;&#x4F8B;&#x5B50;</p>
+<pre><code class="lang-ts">  <span class="hljs-keyword">interface</span> Person {
+    name: <span class="hljs-built_in">string</span>;
+    age: <span class="hljs-built_in">number</span>;
+    location: <span class="hljs-built_in">string</span>;
+  }
+
+  <span class="hljs-keyword">type</span> K1 = keyof Person; <span class="hljs-comment">// &quot;name&quot; | &quot;age&quot; | &quot;location&quot;</span>
+  <span class="hljs-keyword">type</span> K2 = keyof Person[];  <span class="hljs-comment">// &quot;length&quot; | &quot;push&quot; | &quot;pop&quot; | &quot;concat&quot; | ...</span>
+  <span class="hljs-keyword">type</span> K3 = keyof { [x: <span class="hljs-built_in">string</span>]: Person };  <span class="hljs-comment">// string</span>
+</code></pre>
+<p>  &#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x5B57;&#x9762;&#x91CF;&#x7C7B;&#x578B; &#x2014;&#x2014; &#x901A;&#x8FC7; <code>|</code> &#x8FDE;&#x63A5;&#x6240;&#x6709;&#x7684;key&#x3002;</p>
+<h6 id="in-keyof-t">in keyof T</h6>
+<p>&#x770B;&#x4F8B;&#x5B50;</p>
+<pre><code class="lang-ts">  <span class="hljs-keyword">interface</span> Person {
+      name: <span class="hljs-built_in">string</span>;
+      age: <span class="hljs-built_in">number</span>;
+      location: <span class="hljs-built_in">string</span>;
+  }
+  <span class="hljs-keyword">type</span> Partial&lt;T&gt; = {
+    [P <span class="hljs-keyword">in</span> keyof T]?: T[P];
+  }
+
+  <span class="hljs-keyword">type</span> PartialPerson = Partial&lt;Person&gt;
+</code></pre>
+<p>  PartialPerson &#x662F;&#xFF1A;</p>
+<pre><code class="lang-ts">  {
+    name?: <span class="hljs-built_in">string</span>;
+    age?: <span class="hljs-built_in">number</span>;
+    location?: <span class="hljs-built_in">string</span>;
+  }
+</code></pre>
+<p>  &#x7531;&#x6B64;&#x53EF;&#x4EE5;&#x5F97;&#x5230; <code>[P in keyof T]</code> &#x7684;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;&#xFF0C;&#x662F;&#x5728;&#x7C7B;&#x578B;&#x4E2D;&#x4EA7;&#x751F;&#x65B0;&#x5C5E;&#x6027;&#x3002;&#xFF08;&#x5C31;&#x50CF;Python&#x4E2D;&#x7684;&#x5217;&#x8868;&#x63A8;&#x5BFC;&#x5F0F;&#xFF0C;&#x4F46;&#x4E0D;&#x662F;&#x5728;&#x5217;&#x8868;&#x4E2D;&#x4EA7;&#x751F;&#x65B0;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x800C;&#x662F;&#x5728;&#x7C7B;&#x578B;&#x4E2D;&#x4EA7;&#x751F;&#x65B0;&#x7684;&#x5C5E;&#x6027;&#x3002;&#xFF09;</p>
+<h6 id="&#x4E09;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;">&#x4E09;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;</h6>
+<p>&#x4E09;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;&#x7ECF;&#x5E38;&#x548C;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26; extends &#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF1A;</p>
+<p> <code>T extends U ? X : Y</code>: &#x610F;&#x601D;&#x662F;&#xFF0C;&#x82E5;T&#x80FD;&#x591F;&#x8D4B;&#x503C;&#x7ED9;U(&#x5B50;&#x7C7B;&#x578B;)&#xFF0C;&#x90A3;&#x4E48;&#x7C7B;&#x578B;&#x662F;X&#xFF0C;&#x5426;&#x5219;&#x4E3A;Y&#x3002;</p>
+<h5 id="&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#x8FD0;&#x7B97;&#x8FC7;&#x7A0B;&#xFF08;&#x7C7B;&#x578B;&#x8BA1;&#x7B97;&#x51FD;&#x6570;&#xFF09;">&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#x8FD0;&#x7B97;&#x8FC7;&#x7A0B;&#xFF08;&#x7C7B;&#x578B;&#x8BA1;&#x7B97;&#x51FD;&#x6570;&#xFF09;</h5>
+<p>&#x7C7B;&#x6BD4;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-comment">// &#x4F7F;&#x7528; type</span>
+<span class="hljs-keyword">const</span> identity = x =&gt; x; <span class="hljs-comment">// &#x503C;&#x8BA1;&#x7B97;</span>
+<span class="hljs-keyword">type</span> Identity&lt;T&gt; = T; <span class="hljs-comment">// &#x7C7B;&#x578B;&#x8BA1;&#x7B97;&#x51FD;&#x6570;</span>
+
+<span class="hljs-keyword">const</span> pair = (x, y) =&gt; [x, y]; <span class="hljs-comment">// &#x503C;&#x8BA1;&#x7B97;</span>
+<span class="hljs-keyword">type</span> Pair&lt;T, U&gt; = [T, U]; <span class="hljs-comment">// &#x7C7B;&#x578B;&#x8BA1;&#x7B97;&#x51FD;&#x6570;</span>
+
+<span class="hljs-comment">// &#x4F7F;&#x7528; interface</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">module</span>(<span class="hljs-params">x, y</span>) </span>{
+  <span class="hljs-keyword">return</span> {
+    <span class="hljs-comment">//...</span>
+  }
+}
+<span class="hljs-keyword">interface</span> Module&lt;S, R&gt; {
+  namespaced?: <span class="hljs-built_in">boolean</span>;
+  state?: S | (() =&gt; S);
+  getters?: GetterTree&lt;S, R&gt;;
+  actions?: ActionTree&lt;S, R&gt;;
+  mutations?: MutationTree&lt;S&gt;;
+  modules?: ModuleTree&lt;R&gt;;
+}
+</code></pre>
+<p>&#x7C7B;&#x578B;&#x8BA1;&#x7B97;&#x51FD;&#x6570;&#x8FD8;&#x4E00;&#x4E2A;&#x540D;&#x5B57;&#xFF1A;&#x6CDB;&#x578B;&#x3002;</p>
+<p>&#x5F53;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x548C;&#x666E;&#x901A;&#x51FD;&#x6570;&#x7ED3;&#x5408;&#x65F6;&#xFF0C;TS &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x5B9A;&#x4E49;&#x533F;&#x540D;&#x7C7B;&#x578B;&#x51FD;&#x6570;&#x7684;&#x8BED;&#x6CD5; - &#x4F34;&#x968F;&#x51FD;&#x6570;&#x53BB;&#x5B9A;&#x4E49;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">identity</span>&lt;<span class="hljs-title">T</span>&gt;(<span class="hljs-params">x: T</span>): <span class="hljs-title">T</span> </span>{
+  <span class="hljs-keyword">return</span> x;
+}
+
+<span class="hljs-keyword">const</span> outputString = identity&lt;<span class="hljs-built_in">string</span>&gt;(<span class="hljs-string">&apos;foo&apos;</span>);
+<span class="hljs-keyword">const</span> outputNumber = identity&lt;<span class="hljs-built_in">number</span>&gt;(<span class="hljs-number">666</span>);
+</code></pre>
+<p>&#x662F;&#x4E0D;&#x662F;&#x5F88;&#x6E9C;&#xFF0C;&#x800C;&#x4E14;&#x53EF;&#x4EE5;&#x628A;&#x3010;&#x7C7B;&#x578B;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#xFF1A;T&#x3011;&#x548C; &#x3010;&#x51FD;&#x6570;&#x53C2;&#x6570;&#xFF1A;x&#x3011;&#x7684;&#x7C7B;&#x578B;&#x8FDB;&#x884C;&#x5173;&#x8054;&#x3002;</p>
+<h6 id="&#x5185;&#x7F6E;&#x7C7B;&#x578B;&#x8BA1;&#x7B97;&#x51FD;&#x6570;">&#x5185;&#x7F6E;&#x7C7B;&#x578B;&#x8BA1;&#x7B97;&#x51FD;&#x6570;</h6>
+<ul>
+<li>Array<t>: &#x7B49;&#x4EF7;&#x4E8E; <code>T[]</code></t></li>
+<li><p>Partial<t>: &#x7B49;&#x4EF7;&#x4E8E;&#xFF1A; </t></p>
+<pre><code class="lang-ts"><span class="hljs-keyword">type</span> Partial&lt;T&gt; = {
+  [P <span class="hljs-keyword">in</span> keyof T]?: T[P];
+}
+</code></pre>
+</li>
+</ul>
+<h4 id="&#x5982;&#x4F55;&#x7528;&#x8FD9;&#x4E9B;&#x7C7B;&#x578B;&#x5BF9;&#x53D8;&#x91CF;&#x8FDB;&#x884C;&#x7EA6;&#x675F;">&#x5982;&#x4F55;&#x7528;&#x8FD9;&#x4E9B;&#x7C7B;&#x578B;&#x5BF9;&#x53D8;&#x91CF;&#x8FDB;&#x884C;&#x7EA6;&#x675F;</h4>
+<h5 id="&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x65F6;&#x6307;&#x5B9A;&#x7C7B;&#x578B;">&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x65F6;&#x6307;&#x5B9A;&#x7C7B;&#x578B;</h5>
+<h6 id="&#x53D8;&#x91CF;&#x7C7B;&#x578B;&#x7EA6;&#x675F;">&#x53D8;&#x91CF;&#x7C7B;&#x578B;&#x7EA6;&#x675F;</h6>
+<ul>
+<li>&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x5185;&#x7F6E;&#x7C7B;&#x578B;&#x6216;&#x8005;&#x5DF2;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#x540D;&#x5B57;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-ts"><span class="hljs-keyword">let</span> name: <span class="hljs-built_in">string</span>;
+</code></pre>
+<ul>
+<li>&#x8C03;&#x7528;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#x51FD;&#x6570;</li>
+</ul>
+<pre><code class="lang-ts"><span class="hljs-keyword">let</span> name: <span class="hljs-built_in">Array</span>&lt;<span class="hljs-built_in">string</span>&gt;
+</code></pre>
+<ul>
+<li>&#x5373;&#x65F6;&#x5B9A;&#x4E49;&#x533F;&#x540D;&#x7C7B;&#x578B;</li>
+</ul>
+<pre><code class="lang-ts"><span class="hljs-keyword">let</span> name: <span class="hljs-built_in">string</span> | <span class="hljs-built_in">number</span>;
+</code></pre>
+<h6 id="&#x51FD;&#x6570;&#x7C7B;&#x578B;&#x7EA6;&#x675F;">&#x51FD;&#x6570;&#x7C7B;&#x578B;&#x7EA6;&#x675F;</h6>
+<p>&#x51FD;&#x6570;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#x5F80;&#x5F80;&#x548C;&#x51FD;&#x6570;&#x5B9E;&#x73B0;&#x7ED3;&#x5408;&#x5728;&#x4E00;&#x8D77;&#x3002;
+JS &#x4E2D;&#x6709;&#x4E24;&#x79CD;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x65B9;&#x5F0F;&#xFF0C;&#x4EE5;&#x6B64;&#x5206;&#x7C7B;&#x8FDB;&#x884C;&#x4ECB;&#x7ECD;&#x3002;</p>
+<h6 id="&#x51FD;&#x6570;&#x58F0;&#x660E;&#xFF08;function-declaration&#xFF09;"># &#x51FD;&#x6570;&#x58F0;&#x660E;&#xFF08;Function Declaration&#xFF09;</h6>
+<ul>
+<li>function &#x7C7B;&#x578B;&#x58F0;&#x660E; + &#x5B9E;&#x73B0;</li>
+</ul>
+<pre><code class="lang-ts"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reverse</span>(<span class="hljs-params">x: <span class="hljs-built_in">number</span></span>): <span class="hljs-title">number</span></span>;
+</code></pre>
+<p>&#x8FD9;&#x662F;&#x51FD;&#x6570;&#x7684;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#xFF0C;&#x540E;&#x9762;&#x53EF;&#x4EE5;&#x7D27;&#x63A5;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reverse</span>(<span class="hljs-params">x: <span class="hljs-built_in">number</span></span>): <span class="hljs-title">number</span> </span>{
+  <span class="hljs-keyword">return</span> -x
+}
+</code></pre>
+<ul>
+<li>&#x51FD;&#x6570;&#x7C7B;&#x578B;&#x7684;&#x2018;&#x589E;&#x91CF;&#x5B9A;&#x4E49;&#x2019;</li>
+</ul>
+<pre><code class="lang-ts"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reverse</span>(<span class="hljs-params">x: <span class="hljs-built_in">number</span></span>): <span class="hljs-title">number</span></span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reverse</span>(<span class="hljs-params">x: <span class="hljs-built_in">number</span></span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Number</span>(x.toString().split(<span class="hljs-string">&apos;&apos;</span>).reverse().join(<span class="hljs-string">&apos;&apos;</span>))
+}
+</code></pre>
+<p>&#x51FD;&#x6570;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#x8BF4;&#x8FC7;&#xFF0C;function &#x53EF;&#x4EE5;&#x91CD;&#x590D;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x7C7B;&#x578B;&#xFF0C;&#x4E0D;&#x65AD;&#x5BF9;&#x7C7B;&#x578B;&#x7684;&#x63CF;&#x8FF0;&#x8FDB;&#x884C;&#x8865;&#x5145;&#x3002;</p>
+<h6 id="&#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;&#xFF08;function-expression&#xFF09;-&#x628A;&#x4E00;&#x4E2A;&#x533F;&#x540D;&#x51FD;&#x6570;&#x8D4B;&#x503C;&#x7ED9;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;"># &#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;&#xFF08;Function Expression&#xFF09;: &#x628A;&#x4E00;&#x4E2A;&#x533F;&#x540D;&#x51FD;&#x6570;&#x8D4B;&#x503C;&#x7ED9;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;</h6>
+<pre><code class="lang-ts"><span class="hljs-comment">// &#x51FD;&#x6570;&#x58F0;&#x660E;&#xFF08;Function Declaration&#xFF09;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sum</span>(<span class="hljs-params">x, y</span>) </span>{
+    <span class="hljs-keyword">return</span> x + y;
+}
+
+
+<span class="hljs-comment">// &#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;&#xFF08;Function Expression&#xFF09;</span>
+<span class="hljs-keyword">let</span> sum = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">x, y</span>) </span>{
+    <span class="hljs-keyword">return</span> x + y;
+};
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;&#x672C;&#x8D28;&#x662F;&#x628A;&#x4E00;&#x4E2A;&#x533F;&#x540D;&#x51FD;&#x6570;&#x8D4B;&#x503C;&#x7ED9;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x8FD9;&#x4E2A;&#x5C31;&#x5206;&#x4E3A;&#x4E24;&#x90E8;&#x5206;&#xFF1A;</p>
+<ul>
+<li>&#x5BF9;&#x533F;&#x540D;&#x51FD;&#x6570;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#xFF1A;&#x4E0A;&#x9762;&#x5DF2;&#x7ECF;&#x8BF4;&#x8FC7;&#x3002;</li>
+<li>&#x5BF9;&#x53D8;&#x91CF;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#xFF1A;&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x7701;&#x7565;&#xFF0C;&#x7531;&#x53F3;&#x4FA7;&#x7684;&#x51FD;&#x6570;&#x58F0;&#x660E;&#x63A8;&#x65AD;&#x51FA;&#x6765;&#x3002;</li>
+</ul>
+<h6 id="&#x7C7B;&#x7EA6;&#x675F;">&#x7C7B;&#x7EA6;&#x675F;</h6>
+<p>class implements interface&#xFF0C;interface &#x7528;&#x6765;&#x7EA6;&#x675F; class &#x7684;&#x5B9E;&#x4F8B;&#x5305;&#x542B; interface &#x4E2D;&#x58F0;&#x660E;&#x7684;&#x5C5E;&#x6027;&#x3001;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">interface</span> ClockInterface {
+    currentTime: <span class="hljs-built_in">Date</span>;
+}
+
+<span class="hljs-keyword">class</span> Clock <span class="hljs-keyword">implements</span> ClockInterface {
+    currentTime: <span class="hljs-built_in">Date</span> = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
+    <span class="hljs-keyword">constructor</span>(h: number, m: number) { }
+}
+</code></pre>
+<h5 id="&#x65AD;&#x8A00;&#x4E00;&#x4E2A;&#x5DF2;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;">&#x65AD;&#x8A00;&#x4E00;&#x4E2A;&#x5DF2;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;</h5>
+<p>&#x8BED;&#x6CD5;</p>
+<pre><code>&lt;&#x7C7B;&#x578B;&gt;&#x503C;
+</code></pre><p>&#x6216;</p>
+<pre><code>&#x503C; as &#x7C7B;&#x578B;
+</code></pre><p>&#x7B2C;&#x4E8C;&#x79CD;&#x53EA;&#x7528;&#x5728; tsx &#x4E2D;&#x3002;</p>
+<p>&#x8FD9;&#x79CD;&#x9700;&#x6C42;&#x4EC5;&#x53D1;&#x751F;&#x5728;&#xFF0C;&#x53D8;&#x91CF;&#x521D;&#x59CB;&#x5316;&#x65F6;&#x662F;&#x591A;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x96C6;&#x5408;&#x7C7B;&#x578B;&#xFF0C;&#x800C;&#x4E14; TS &#x5728;&#x67D0;&#x4E00;&#x523B;&#x63A8;&#x65AD;&#x4E0D;&#x51FA;&#x5177;&#x4F53;&#x7C7B;&#x578B;&#x65F6;&#xFF1A;</p>
+<pre><code class="lang-ts"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getLength</span>(<span class="hljs-params">something: <span class="hljs-built_in">string</span> | <span class="hljs-built_in">number</span></span>): <span class="hljs-title">number</span> </span>{
+    <span class="hljs-keyword">if</span> ((&lt;<span class="hljs-built_in">string</span>&gt;something).length) {
+        <span class="hljs-keyword">return</span> (&lt;<span class="hljs-built_in">string</span>&gt;something).length; <span class="hljs-comment">// &#x5982;&#x679C;&#x4E0D;&#x65AD;&#x8A00;&#xFF0C;&#x53D8;&#x91CF;&#x53EA;&#x80FD;&#x4F7F;&#x7528; string &#x3001;number &#x5171;&#x6709;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x6240;&#x4EE5;&#x5C31;&#x4F1A;&#x62A5;&#x9519;</span>
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">return</span> something.toString().length;
+    }
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 最少必要知识">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"类型系统","level":"1.2.1","depth":2,"next":{"title":"什么是类型","level":"1.2.1.1","depth":3,"ref":"","articles":[]},"previous":{"title":"最少必要知识","level":"1.2","depth":1,"path":"basic/README.md","ref":"./basic/README.md","articles":[{"title":"类型系统","level":"1.2.1","depth":2,"path":"basic/type.md","ref":"./basic/type.md","articles":[{"title":"什么是类型","level":"1.2.1.1","depth":3,"ref":"","articles":[]},{"title":"哪些类型可以直接用（内置类型）","level":"1.2.1.2","depth":3,"ref":"","articles":[{"title":"JavaScript 的内置类型","level":"1.2.1.2.1","depth":4,"ref":"","articles":[]},{"title":"DOM 和 BOM 的内置对象","level":"1.2.1.2.2","depth":4,"ref":"","articles":[]},{"title":"TS 引入的内置类型","level":"1.2.1.2.3","depth":4,"ref":"","articles":[]}]},{"title":"如何自定义类型","level":"1.2.1.3","depth":3,"ref":"","articles":[{"title":"定义对象的形状","level":"1.2.1.3.1","depth":4,"ref":"","articles":[{"title":"定义不确定属性名的对象类型","level":"1.2.1.3.1.1","depth":5,"ref":"","articles":[]}]},{"title":"定义数组的形状","level":"1.2.1.3.2","depth":4,"ref":"","articles":[]},{"title":"通过定义对象来定义类型","level":"1.2.1.3.3","depth":4,"ref":"","articles":[]},{"title":"通过引用对象的 属性、方法，来引用其已定义的类型","level":"1.2.1.3.4","depth":4,"ref":"","articles":[]},{"title":"定义类的类型","level":"1.2.1.3.5","depth":4,"ref":"","articles":[]},{"title":"通过定义 class 来定义类的实例类型","level":"1.2.1.3.6","depth":4,"ref":"","articles":[]},{"title":"定义函数的形状","level":"1.2.1.3.7","depth":4,"ref":"","articles":[{"title":"几种特殊参数的类型声明","level":"1.2.1.3.7.1","depth":5,"ref":"","articles":[]}]},{"title":"字面量类型（literal Type）","level":"1.2.1.3.8","depth":4,"path":"literal-type","ref":"literal-type","articles":[]},{"title":"修饰符","level":"1.2.1.3.9","depth":4,"ref":"","articles":[]}]},{"title":"类型缺失时的行为","level":"1.2.1.4","depth":3,"ref":"","articles":[]},{"title":"可以对类型进行编程吗（类型运算）","level":"1.2.1.5","depth":3,"ref":"","articles":[{"title":"属性访问","level":"1.2.1.5.1","depth":4,"ref":"","articles":[]},{"title":"即时运算","level":"1.2.1.5.2","depth":4,"ref":"","articles":[]},{"title":"定义类型运算过程（类型计算函数）","level":"1.2.1.5.3","depth":4,"ref":"","articles":[{"title":"内置类型计算函数","level":"1.2.1.5.3.1","depth":5,"ref":"","articles":[]}]}]},{"title":"如何用这些类型对变量进行约束","level":"1.2.1.6","depth":3,"ref":"","articles":[{"title":"初始化一个变量时指定类型","level":"1.2.1.6.1","depth":4,"ref":"","articles":[{"title":"变量类型约束","level":"1.2.1.6.1.1","depth":5,"ref":"","articles":[]},{"title":"函数类型约束","level":"1.2.1.6.1.2","depth":5,"ref":"","articles":[]},{"title":"类约束","level":"1.2.1.6.1.3","depth":5,"ref":"","articles":[]}]},{"title":"断言一个已定义变量的类型","level":"1.2.1.6.2","depth":4,"ref":"","articles":[]}]}]},{"title":"面向对象通用知识","level":"1.2.2","depth":2,"path":"basic/object-oriented.md","ref":"./basic/object-oriented.md","articles":[]},{"title":"语法增强","level":"1.2.3","depth":2,"path":"basic/syntax-enhance.md","ref":"./basic/syntax-enhance.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"basic/type.md","mtime":"2019-12-05T14:37:24.266Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T00:57:13.887Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
